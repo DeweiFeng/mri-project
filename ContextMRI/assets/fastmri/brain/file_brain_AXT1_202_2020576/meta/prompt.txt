@@ -1,0 +1,1 @@
+brain, Slice 8, T1, Sequence: TurboSpinEcho, TR: 446, TE: 9, TI: 100, Flip angle: 140
