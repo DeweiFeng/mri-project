@@ -1,0 +1,1775 @@
+anatomy,filename,slice,contrast,pathology,sequence,TR,TE,TI,flip_angle
+knee,file1000007,0,PDFS,,TurboSpinEcho,2960,35,100,140
+knee,file1000007,1,PDFS,,TurboSpinEcho,2960,35,100,140
+knee,file1000007,2,PDFS,,TurboSpinEcho,2960,35,100,140
+knee,file1000007,3,PDFS,,TurboSpinEcho,2960,35,100,140
+knee,file1000007,4,PDFS,,TurboSpinEcho,2960,35,100,140
+knee,file1000007,5,PDFS,,TurboSpinEcho,2960,35,100,140
+knee,file1000007,6,PDFS,,TurboSpinEcho,2960,35,100,140
+knee,file1000007,7,PDFS,,TurboSpinEcho,2960,35,100,140
+knee,file1000007,8,PDFS,,TurboSpinEcho,2960,35,100,140
+knee,file1000007,9,PDFS,Joint Effusion ,TurboSpinEcho,2960,35,100,140
+knee,file1000007,10,PDFS,Joint Effusion ,TurboSpinEcho,2960,35,100,140
+knee,file1000007,11,PDFS,Joint Effusion ,TurboSpinEcho,2960,35,100,140
+knee,file1000007,12,PDFS,"Joint Effusion , Joint Effusion ",TurboSpinEcho,2960,35,100,140
+knee,file1000007,13,PDFS,"Joint Effusion , Joint Effusion ",TurboSpinEcho,2960,35,100,140
+knee,file1000007,14,PDFS,"Joint Effusion , Joint Effusion ",TurboSpinEcho,2960,35,100,140
+knee,file1000007,15,PDFS,,TurboSpinEcho,2960,35,100,140
+knee,file1000007,16,PDFS,,TurboSpinEcho,2960,35,100,140
+knee,file1000007,17,PDFS,,TurboSpinEcho,2960,35,100,140
+knee,file1000007,18,PDFS,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,2960,35,100,140
+knee,file1000007,19,PDFS,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,2960,35,100,140
+knee,file1000007,20,PDFS,"Cartilage - Partial Thickness loss/defect, Meniscus Tear",TurboSpinEcho,2960,35,100,140
+knee,file1000007,21,PDFS,"Cartilage - Partial Thickness loss/defect, Cartilage - Partial Thickness loss/defect, Meniscus Tear",TurboSpinEcho,2960,35,100,140
+knee,file1000007,22,PDFS,"Cartilage - Partial Thickness loss/defect, Meniscus Tear",TurboSpinEcho,2960,35,100,140
+knee,file1000007,23,PDFS,Meniscus Tear,TurboSpinEcho,2960,35,100,140
+knee,file1000007,24,PDFS,"Cartilage - Partial Thickness loss/defect, Cartilage - Partial Thickness loss/defect, Meniscus Tear",TurboSpinEcho,2960,35,100,140
+knee,file1000007,25,PDFS,"Cartilage - Partial Thickness loss/defect, Meniscus Tear",TurboSpinEcho,2960,35,100,140
+knee,file1000007,26,PDFS,"Meniscus Tear, Displaced Meniscal Tissue",TurboSpinEcho,2960,35,100,140
+knee,file1000007,27,PDFS,"Meniscus Tear, Displaced Meniscal Tissue",TurboSpinEcho,2960,35,100,140
+knee,file1000007,28,PDFS,Meniscus Tear,TurboSpinEcho,2960,35,100,140
+knee,file1000007,29,PDFS,,TurboSpinEcho,2960,35,100,140
+knee,file1000007,30,PDFS,,TurboSpinEcho,2960,35,100,140
+knee,file1000007,31,PDFS,,TurboSpinEcho,2960,35,100,140
+knee,file1000007,32,PDFS,,TurboSpinEcho,2960,35,100,140
+knee,file1000007,33,PDFS,,TurboSpinEcho,2960,35,100,140
+knee,file1000007,34,PDFS,,TurboSpinEcho,2960,35,100,140
+knee,file1000007,35,PDFS,,TurboSpinEcho,2960,35,100,140
+knee,file1000007,36,PDFS,,TurboSpinEcho,2960,35,100,140
+knee,file1000007,37,PDFS,,TurboSpinEcho,2960,35,100,140
+knee,file1000026,0,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000026,1,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000026,2,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000026,3,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000026,4,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000026,5,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000026,6,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000026,7,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000026,8,PDFS,Joint Bodies,TurboSpinEcho,3000,33,100,150
+knee,file1000026,9,PDFS,Joint Bodies,TurboSpinEcho,3000,33,100,150
+knee,file1000026,10,PDFS,"Cartilage - Partial Thickness loss/defect, Joint Effusion , Joint Bodies",TurboSpinEcho,3000,33,100,150
+knee,file1000026,11,PDFS,Joint Effusion ,TurboSpinEcho,3000,33,100,150
+knee,file1000026,12,PDFS,"Cartilage - Partial Thickness loss/defect, Joint Effusion ",TurboSpinEcho,3000,33,100,150
+knee,file1000026,13,PDFS,Joint Effusion ,TurboSpinEcho,3000,33,100,150
+knee,file1000026,14,PDFS,"Cartilage - Partial Thickness loss/defect, Joint Effusion ",TurboSpinEcho,3000,33,100,150
+knee,file1000026,15,PDFS,"Cartilage - Partial Thickness loss/defect, Cartilage - Partial Thickness loss/defect",TurboSpinEcho,3000,33,100,150
+knee,file1000026,16,PDFS,"Cartilage - Partial Thickness loss/defect, Cartilage - Full Thickness loss/defect",TurboSpinEcho,3000,33,100,150
+knee,file1000026,17,PDFS,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,3000,33,100,150
+knee,file1000026,18,PDFS,"Cartilage - Partial Thickness loss/defect, Cartilage - Partial Thickness loss/defect",TurboSpinEcho,3000,33,100,150
+knee,file1000026,19,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000026,20,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000026,21,PDFS,Meniscus Tear,TurboSpinEcho,3000,33,100,150
+knee,file1000026,22,PDFS,Meniscus Tear,TurboSpinEcho,3000,33,100,150
+knee,file1000026,23,PDFS,Meniscus Tear,TurboSpinEcho,3000,33,100,150
+knee,file1000026,24,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000026,25,PDFS,Periarticular cysts,TurboSpinEcho,3000,33,100,150
+knee,file1000026,26,PDFS,Periarticular cysts,TurboSpinEcho,3000,33,100,150
+knee,file1000026,27,PDFS,Periarticular cysts,TurboSpinEcho,3000,33,100,150
+knee,file1000026,28,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000026,29,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000033,0,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000033,1,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000033,2,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000033,3,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000033,4,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000033,5,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000033,6,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000033,7,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000033,8,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000033,9,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000033,10,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000033,11,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000033,12,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000033,13,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000033,14,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000033,15,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000033,16,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000033,17,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000033,18,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000033,19,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000033,20,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000033,21,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000033,22,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000033,23,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000033,24,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000033,25,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000033,26,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000033,27,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000033,28,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000033,29,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000033,30,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000033,31,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000033,32,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000206,0,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1000206,1,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1000206,2,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1000206,3,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1000206,4,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1000206,5,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1000206,6,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1000206,7,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1000206,8,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1000206,9,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1000206,10,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1000206,11,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1000206,12,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1000206,13,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1000206,14,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1000206,15,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1000206,16,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1000206,17,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1000206,18,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1000206,19,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1000206,20,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1000206,21,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1000206,22,PDFS,Meniscus Tear,TurboSpinEcho,3060,33,100,150
+knee,file1000206,23,PDFS,Meniscus Tear,TurboSpinEcho,3060,33,100,150
+knee,file1000206,24,PDFS,Meniscus Tear,TurboSpinEcho,3060,33,100,150
+knee,file1000206,25,PDFS,Meniscus Tear,TurboSpinEcho,3060,33,100,150
+knee,file1000206,26,PDFS,Meniscus Tear,TurboSpinEcho,3060,33,100,150
+knee,file1000206,27,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1000206,28,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1000206,29,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1000206,30,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1000206,31,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1000206,32,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1000206,33,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1000206,34,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1000254,0,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000254,1,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000254,2,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000254,3,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000254,4,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000254,5,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000254,6,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000254,7,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000254,8,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000254,9,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000254,10,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000254,11,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000254,12,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000254,13,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000254,14,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000254,15,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000254,16,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000254,17,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000254,18,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000254,19,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000254,20,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000254,21,PDFS,Meniscus Tear,TurboSpinEcho,3000,33,100,150
+knee,file1000254,22,PDFS,Meniscus Tear,TurboSpinEcho,3000,33,100,150
+knee,file1000254,23,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000254,24,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000254,25,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000254,26,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000254,27,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000254,28,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000254,29,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000254,30,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000254,31,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1000267,0,PDFS,,TurboSpinEcho,3060,30,100,150
+knee,file1000267,1,PDFS,,TurboSpinEcho,3060,30,100,150
+knee,file1000267,2,PDFS,,TurboSpinEcho,3060,30,100,150
+knee,file1000267,3,PDFS,,TurboSpinEcho,3060,30,100,150
+knee,file1000267,4,PDFS,,TurboSpinEcho,3060,30,100,150
+knee,file1000267,5,PDFS,,TurboSpinEcho,3060,30,100,150
+knee,file1000267,6,PDFS,,TurboSpinEcho,3060,30,100,150
+knee,file1000267,7,PDFS,,TurboSpinEcho,3060,30,100,150
+knee,file1000267,8,PDFS,,TurboSpinEcho,3060,30,100,150
+knee,file1000267,9,PDFS,,TurboSpinEcho,3060,30,100,150
+knee,file1000267,10,PDFS,,TurboSpinEcho,3060,30,100,150
+knee,file1000267,11,PDFS,,TurboSpinEcho,3060,30,100,150
+knee,file1000267,12,PDFS,,TurboSpinEcho,3060,30,100,150
+knee,file1000267,13,PDFS,,TurboSpinEcho,3060,30,100,150
+knee,file1000267,14,PDFS,,TurboSpinEcho,3060,30,100,150
+knee,file1000267,15,PDFS,,TurboSpinEcho,3060,30,100,150
+knee,file1000267,16,PDFS,,TurboSpinEcho,3060,30,100,150
+knee,file1000267,17,PDFS,,TurboSpinEcho,3060,30,100,150
+knee,file1000267,18,PDFS,Meniscus Tear,TurboSpinEcho,3060,30,100,150
+knee,file1000267,19,PDFS,Meniscus Tear,TurboSpinEcho,3060,30,100,150
+knee,file1000267,20,PDFS,Meniscus Tear,TurboSpinEcho,3060,30,100,150
+knee,file1000267,21,PDFS,Meniscus Tear,TurboSpinEcho,3060,30,100,150
+knee,file1000267,22,PDFS,Meniscus Tear,TurboSpinEcho,3060,30,100,150
+knee,file1000267,23,PDFS,Meniscus Tear,TurboSpinEcho,3060,30,100,150
+knee,file1000267,24,PDFS,Meniscus Tear,TurboSpinEcho,3060,30,100,150
+knee,file1000267,25,PDFS,"Meniscus Tear, Periarticular cysts",TurboSpinEcho,3060,30,100,150
+knee,file1000267,26,PDFS,"Meniscus Tear, Periarticular cysts",TurboSpinEcho,3060,30,100,150
+knee,file1000267,27,PDFS,Meniscus Tear,TurboSpinEcho,3060,30,100,150
+knee,file1000267,28,PDFS,,TurboSpinEcho,3060,30,100,150
+knee,file1000267,29,PDFS,,TurboSpinEcho,3060,30,100,150
+knee,file1000267,30,PDFS,,TurboSpinEcho,3060,30,100,150
+knee,file1000267,31,PDFS,,TurboSpinEcho,3060,30,100,150
+knee,file1000267,32,PDFS,,TurboSpinEcho,3060,30,100,150
+knee,file1000267,33,PDFS,,TurboSpinEcho,3060,30,100,150
+knee,file1000267,34,PDFS,,TurboSpinEcho,3060,30,100,150
+knee,file1000277,0,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000277,1,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000277,2,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000277,3,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000277,4,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000277,5,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000277,6,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000277,7,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000277,8,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000277,9,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000277,10,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000277,11,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000277,12,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000277,13,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000277,14,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000277,15,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000277,16,PD,"Cartilage - Partial Thickness loss/defect, Bone- Subchondral edema",TurboSpinEcho,2300,27,100,140
+knee,file1000277,17,PD,Bone- Subchondral edema,TurboSpinEcho,2300,27,100,140
+knee,file1000277,18,PD,Bone- Subchondral edema,TurboSpinEcho,2300,27,100,140
+knee,file1000277,19,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000277,20,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000277,21,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000277,22,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000277,23,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000277,24,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000277,25,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000277,26,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000277,27,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000277,28,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000277,29,PD,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,2300,27,100,140
+knee,file1000277,30,PD,Meniscus Tear,TurboSpinEcho,2300,27,100,140
+knee,file1000277,31,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000277,32,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000277,33,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000277,34,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000277,35,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000277,36,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000277,37,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000277,38,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000277,39,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000277,40,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000277,41,PD,,TurboSpinEcho,2300,27,100,140
+knee,file1000283,0,PD,,TurboSpinEcho,2300,35,100,140
+knee,file1000283,1,PD,,TurboSpinEcho,2300,35,100,140
+knee,file1000283,2,PD,,TurboSpinEcho,2300,35,100,140
+knee,file1000283,3,PD,,TurboSpinEcho,2300,35,100,140
+knee,file1000283,4,PD,,TurboSpinEcho,2300,35,100,140
+knee,file1000283,5,PD,,TurboSpinEcho,2300,35,100,140
+knee,file1000283,6,PD,,TurboSpinEcho,2300,35,100,140
+knee,file1000283,7,PD,,TurboSpinEcho,2300,35,100,140
+knee,file1000283,8,PD,,TurboSpinEcho,2300,35,100,140
+knee,file1000283,9,PD,,TurboSpinEcho,2300,35,100,140
+knee,file1000283,10,PD,,TurboSpinEcho,2300,35,100,140
+knee,file1000283,11,PD,,TurboSpinEcho,2300,35,100,140
+knee,file1000283,12,PD,,TurboSpinEcho,2300,35,100,140
+knee,file1000283,13,PD,,TurboSpinEcho,2300,35,100,140
+knee,file1000283,14,PD,,TurboSpinEcho,2300,35,100,140
+knee,file1000283,15,PD,,TurboSpinEcho,2300,35,100,140
+knee,file1000283,16,PD,Meniscus Tear,TurboSpinEcho,2300,35,100,140
+knee,file1000283,17,PD,Meniscus Tear,TurboSpinEcho,2300,35,100,140
+knee,file1000283,18,PD,Meniscus Tear,TurboSpinEcho,2300,35,100,140
+knee,file1000283,19,PD,Meniscus Tear,TurboSpinEcho,2300,35,100,140
+knee,file1000283,20,PD,Meniscus Tear,TurboSpinEcho,2300,35,100,140
+knee,file1000283,21,PD,"Cartilage - Partial Thickness loss/defect, Meniscus Tear",TurboSpinEcho,2300,35,100,140
+knee,file1000283,22,PD,"Ligament - ACL Low Grade sprain, Cartilage - Partial Thickness loss/defect, Meniscus Tear",TurboSpinEcho,2300,35,100,140
+knee,file1000283,23,PD,"Ligament - ACL Low Grade sprain, Cartilage - Partial Thickness loss/defect, Meniscus Tear",TurboSpinEcho,2300,35,100,140
+knee,file1000283,24,PD,"Ligament - ACL Low Grade sprain, Meniscus Tear",TurboSpinEcho,2300,35,100,140
+knee,file1000283,25,PD,Meniscus Tear,TurboSpinEcho,2300,35,100,140
+knee,file1000283,26,PD,Meniscus Tear,TurboSpinEcho,2300,35,100,140
+knee,file1000283,27,PD,,TurboSpinEcho,2300,35,100,140
+knee,file1000283,28,PD,,TurboSpinEcho,2300,35,100,140
+knee,file1000283,29,PD,,TurboSpinEcho,2300,35,100,140
+knee,file1000283,30,PD,,TurboSpinEcho,2300,35,100,140
+knee,file1000283,31,PD,,TurboSpinEcho,2300,35,100,140
+knee,file1000283,32,PD,,TurboSpinEcho,2300,35,100,140
+knee,file1000308,0,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000308,1,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000308,2,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000308,3,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000308,4,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000308,5,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000308,6,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000308,7,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000308,8,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000308,9,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000308,10,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000308,11,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000308,12,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000308,13,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000308,14,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000308,15,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000308,16,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000308,17,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000308,18,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000308,19,PD,Ligament - ACL High Grade Sprain,TurboSpinEcho,2800,32,100,140
+knee,file1000308,20,PD,Ligament - ACL High Grade Sprain,TurboSpinEcho,2800,32,100,140
+knee,file1000308,21,PD,Ligament - ACL High Grade Sprain,TurboSpinEcho,2800,32,100,140
+knee,file1000308,22,PD,Ligament - ACL High Grade Sprain,TurboSpinEcho,2800,32,100,140
+knee,file1000308,23,PD,Ligament - ACL High Grade Sprain,TurboSpinEcho,2800,32,100,140
+knee,file1000308,24,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000308,25,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000308,26,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000308,27,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000308,28,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000308,29,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000308,30,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000308,31,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000308,32,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000308,33,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000308,34,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000308,35,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000350,0,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000350,1,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000350,2,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000350,3,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000350,4,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000350,5,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000350,6,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000350,7,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000350,8,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000350,9,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000350,10,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000350,11,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000350,12,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000350,13,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000350,14,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000350,15,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000350,16,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000350,17,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000350,18,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000350,19,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000350,20,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000350,21,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000350,22,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000350,23,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000350,24,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000350,25,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000350,26,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000350,27,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000350,28,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000350,29,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000350,30,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000350,31,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000464,0,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000464,1,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000464,2,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000464,3,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000464,4,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000464,5,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000464,6,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000464,7,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000464,8,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000464,9,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000464,10,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000464,11,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000464,12,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000464,13,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000464,14,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000464,15,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000464,16,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000464,17,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000464,18,PD,Ligament - MCL Low-Mod Grade Sprain,TurboSpinEcho,2750,27,100,140
+knee,file1000464,19,PD,Ligament - MCL Low-Mod Grade Sprain,TurboSpinEcho,2750,27,100,140
+knee,file1000464,20,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000464,21,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000464,22,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000464,23,PD,Meniscus Tear,TurboSpinEcho,2750,27,100,140
+knee,file1000464,24,PD,Meniscus Tear,TurboSpinEcho,2750,27,100,140
+knee,file1000464,25,PD,Meniscus Tear,TurboSpinEcho,2750,27,100,140
+knee,file1000464,26,PD,Meniscus Tear,TurboSpinEcho,2750,27,100,140
+knee,file1000464,27,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000464,28,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000464,29,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000464,30,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000464,31,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000464,32,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000464,33,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000464,34,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000464,35,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000476,0,PDFS,,TurboSpinEcho,2970,33,100,140
+knee,file1000476,1,PDFS,,TurboSpinEcho,2970,33,100,140
+knee,file1000476,2,PDFS,,TurboSpinEcho,2970,33,100,140
+knee,file1000476,3,PDFS,,TurboSpinEcho,2970,33,100,140
+knee,file1000476,4,PDFS,,TurboSpinEcho,2970,33,100,140
+knee,file1000476,5,PDFS,,TurboSpinEcho,2970,33,100,140
+knee,file1000476,6,PDFS,,TurboSpinEcho,2970,33,100,140
+knee,file1000476,7,PDFS,,TurboSpinEcho,2970,33,100,140
+knee,file1000476,8,PDFS,,TurboSpinEcho,2970,33,100,140
+knee,file1000476,9,PDFS,,TurboSpinEcho,2970,33,100,140
+knee,file1000476,10,PDFS,,TurboSpinEcho,2970,33,100,140
+knee,file1000476,11,PDFS,,TurboSpinEcho,2970,33,100,140
+knee,file1000476,12,PDFS,,TurboSpinEcho,2970,33,100,140
+knee,file1000476,13,PDFS,,TurboSpinEcho,2970,33,100,140
+knee,file1000476,14,PDFS,,TurboSpinEcho,2970,33,100,140
+knee,file1000476,15,PDFS,,TurboSpinEcho,2970,33,100,140
+knee,file1000476,16,PDFS,,TurboSpinEcho,2970,33,100,140
+knee,file1000476,17,PDFS,,TurboSpinEcho,2970,33,100,140
+knee,file1000476,18,PDFS,,TurboSpinEcho,2970,33,100,140
+knee,file1000476,19,PDFS,Meniscus Tear,TurboSpinEcho,2970,33,100,140
+knee,file1000476,20,PDFS,"Meniscus Tear, Meniscus Tear",TurboSpinEcho,2970,33,100,140
+knee,file1000476,21,PDFS,"Meniscus Tear, Meniscus Tear",TurboSpinEcho,2970,33,100,140
+knee,file1000476,22,PDFS,"Meniscus Tear, Meniscus Tear, Periarticular cysts",TurboSpinEcho,2970,33,100,140
+knee,file1000476,23,PDFS,"Meniscus Tear, Meniscus Tear, Periarticular cysts",TurboSpinEcho,2970,33,100,140
+knee,file1000476,24,PDFS,"Meniscus Tear, Meniscus Tear, Periarticular cysts",TurboSpinEcho,2970,33,100,140
+knee,file1000476,25,PDFS,"Cartilage - Partial Thickness loss/defect, Meniscus Tear, Meniscus Tear, Periarticular cysts, LCL Complex - Low-Mod Grade Sprain",TurboSpinEcho,2970,33,100,140
+knee,file1000476,26,PDFS,"Meniscus Tear, Meniscus Tear, Periarticular cysts, LCL Complex - Low-Mod Grade Sprain, LCL Complex - Low-Mod Grade Sprain",TurboSpinEcho,2970,33,100,140
+knee,file1000476,27,PDFS,"Cartilage - Partial Thickness loss/defect, Meniscus Tear, Meniscus Tear, Periarticular cysts, LCL Complex - Low-Mod Grade Sprain",TurboSpinEcho,2970,33,100,140
+knee,file1000476,28,PDFS,"Meniscus Tear, Periarticular cysts",TurboSpinEcho,2970,33,100,140
+knee,file1000476,29,PDFS,"Meniscus Tear, Periarticular cysts",TurboSpinEcho,2970,33,100,140
+knee,file1000476,30,PDFS,"Meniscus Tear, Periarticular cysts",TurboSpinEcho,2970,33,100,140
+knee,file1000476,31,PDFS,Periarticular cysts,TurboSpinEcho,2970,33,100,140
+knee,file1000476,32,PDFS,,TurboSpinEcho,2970,33,100,140
+knee,file1000476,33,PDFS,,TurboSpinEcho,2970,33,100,140
+knee,file1000476,34,PDFS,,TurboSpinEcho,2970,33,100,140
+knee,file1000476,35,PDFS,,TurboSpinEcho,2970,33,100,140
+knee,file1000476,36,PDFS,,TurboSpinEcho,2970,33,100,140
+knee,file1000476,37,PDFS,,TurboSpinEcho,2970,33,100,140
+knee,file1000476,38,PDFS,,TurboSpinEcho,2970,33,100,140
+knee,file1000476,39,PDFS,,TurboSpinEcho,2970,33,100,140
+knee,file1000537,0,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000537,1,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000537,2,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000537,3,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000537,4,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000537,5,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000537,6,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000537,7,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000537,8,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000537,9,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000537,10,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000537,11,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000537,12,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000537,13,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000537,14,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000537,15,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000537,16,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000537,17,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000537,18,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000537,19,PD,Ligament - MCL Low-Mod Grade Sprain,TurboSpinEcho,2800,32,100,140
+knee,file1000537,20,PD,Ligament - MCL Low-Mod Grade Sprain,TurboSpinEcho,2800,32,100,140
+knee,file1000537,21,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000537,22,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000537,23,PD,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,2800,32,100,140
+knee,file1000537,24,PD,"Cartilage - Partial Thickness loss/defect, Meniscus Tear",TurboSpinEcho,2800,32,100,140
+knee,file1000537,25,PD,Meniscus Tear,TurboSpinEcho,2800,32,100,140
+knee,file1000537,26,PD,Meniscus Tear,TurboSpinEcho,2800,32,100,140
+knee,file1000537,27,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000537,28,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000537,29,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000537,30,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000537,31,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000537,32,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000537,33,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000537,34,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000591,0,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000591,1,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000591,2,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000591,3,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000591,4,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000591,5,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000591,6,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000591,7,PDFS,Bone- Subchondral edema,TurboSpinEcho,2870,33,100,140
+knee,file1000591,8,PDFS,Bone- Subchondral edema,TurboSpinEcho,2870,33,100,140
+knee,file1000591,9,PDFS,Bone- Subchondral edema,TurboSpinEcho,2870,33,100,140
+knee,file1000591,10,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000591,11,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000591,12,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000591,13,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000591,14,PDFS,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,2870,33,100,140
+knee,file1000591,15,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000591,16,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000591,17,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000591,18,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000591,19,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000591,20,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000591,21,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000591,22,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000591,23,PDFS,"Cartilage - Partial Thickness loss/defect, Meniscus Tear",TurboSpinEcho,2870,33,100,140
+knee,file1000591,24,PDFS,"Cartilage - Partial Thickness loss/defect, Cartilage - Partial Thickness loss/defect, Meniscus Tear",TurboSpinEcho,2870,33,100,140
+knee,file1000591,25,PDFS,"Cartilage - Partial Thickness loss/defect, Cartilage - Partial Thickness loss/defect, Meniscus Tear",TurboSpinEcho,2870,33,100,140
+knee,file1000591,26,PDFS,"Cartilage - Partial Thickness loss/defect, Cartilage - Partial Thickness loss/defect, Meniscus Tear",TurboSpinEcho,2870,33,100,140
+knee,file1000591,27,PDFS,"Cartilage - Partial Thickness loss/defect, Meniscus Tear",TurboSpinEcho,2870,33,100,140
+knee,file1000591,28,PDFS,"Cartilage - Partial Thickness loss/defect, Meniscus Tear",TurboSpinEcho,2870,33,100,140
+knee,file1000591,29,PDFS,Meniscus Tear,TurboSpinEcho,2870,33,100,140
+knee,file1000591,30,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000591,31,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000591,32,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000591,33,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000591,34,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000591,35,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000591,36,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000591,37,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000635,0,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000635,1,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000635,2,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000635,3,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000635,4,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000635,5,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000635,6,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000635,7,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000635,8,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000635,9,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000635,10,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000635,11,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000635,12,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000635,13,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000635,14,PD,"Cartilage - Partial Thickness loss/defect, Periarticular cysts",TurboSpinEcho,2750,27,100,140
+knee,file1000635,15,PD,"Cartilage - Partial Thickness loss/defect, Periarticular cysts",TurboSpinEcho,2750,27,100,140
+knee,file1000635,16,PD,Periarticular cysts,TurboSpinEcho,2750,27,100,140
+knee,file1000635,17,PD,Periarticular cysts,TurboSpinEcho,2750,27,100,140
+knee,file1000635,18,PD,Periarticular cysts,TurboSpinEcho,2750,27,100,140
+knee,file1000635,19,PD,Periarticular cysts,TurboSpinEcho,2750,27,100,140
+knee,file1000635,20,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000635,21,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000635,22,PD,Meniscus Tear,TurboSpinEcho,2750,27,100,140
+knee,file1000635,23,PD,"Cartilage - Partial Thickness loss/defect, Meniscus Tear",TurboSpinEcho,2750,27,100,140
+knee,file1000635,24,PD,"Cartilage - Partial Thickness loss/defect, Meniscus Tear",TurboSpinEcho,2750,27,100,140
+knee,file1000635,25,PD,"Cartilage - Partial Thickness loss/defect, Meniscus Tear, Cartilage - Full Thickness loss/defect",TurboSpinEcho,2750,27,100,140
+knee,file1000635,26,PD,"Cartilage - Partial Thickness loss/defect, Meniscus Tear, Cartilage - Full Thickness loss/defect",TurboSpinEcho,2750,27,100,140
+knee,file1000635,27,PD,"Cartilage - Partial Thickness loss/defect, Meniscus Tear, Cartilage - Full Thickness loss/defect, Cartilage - Full Thickness loss/defect",TurboSpinEcho,2750,27,100,140
+knee,file1000635,28,PD,"Cartilage - Partial Thickness loss/defect, Meniscus Tear, Cartilage - Full Thickness loss/defect, Cartilage - Full Thickness loss/defect",TurboSpinEcho,2750,27,100,140
+knee,file1000635,29,PD,"Cartilage - Partial Thickness loss/defect, Meniscus Tear, Cartilage - Full Thickness loss/defect, Cartilage - Full Thickness loss/defect",TurboSpinEcho,2750,27,100,140
+knee,file1000635,30,PD,"Cartilage - Partial Thickness loss/defect, Meniscus Tear, Cartilage - Full Thickness loss/defect",TurboSpinEcho,2750,27,100,140
+knee,file1000635,31,PD,"Cartilage - Partial Thickness loss/defect, Meniscus Tear, Cartilage - Full Thickness loss/defect, Cartilage - Full Thickness loss/defect",TurboSpinEcho,2750,27,100,140
+knee,file1000635,32,PD,"Cartilage - Partial Thickness loss/defect, Cartilage - Partial Thickness loss/defect, Cartilage - Partial Thickness loss/defect, Meniscus Tear",TurboSpinEcho,2750,27,100,140
+knee,file1000635,33,PD,Meniscus Tear,TurboSpinEcho,2750,27,100,140
+knee,file1000635,34,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000635,35,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000635,36,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000635,37,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000635,38,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1000817,0,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000817,1,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000817,2,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000817,3,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000817,4,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000817,5,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000817,6,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000817,7,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000817,8,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000817,9,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000817,10,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000817,11,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000817,12,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000817,13,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000817,14,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000817,15,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000817,16,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000817,17,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000817,18,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000817,19,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000817,20,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000817,21,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000817,22,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000817,23,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000817,24,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000817,25,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000817,26,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000817,27,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000817,28,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000817,29,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000817,30,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000817,31,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000817,32,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000817,33,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000817,34,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000858,0,PDFS,,TurboSpinEcho,2570,33,100,140
+knee,file1000858,1,PDFS,,TurboSpinEcho,2570,33,100,140
+knee,file1000858,2,PDFS,,TurboSpinEcho,2570,33,100,140
+knee,file1000858,3,PDFS,,TurboSpinEcho,2570,33,100,140
+knee,file1000858,4,PDFS,,TurboSpinEcho,2570,33,100,140
+knee,file1000858,5,PDFS,,TurboSpinEcho,2570,33,100,140
+knee,file1000858,6,PDFS,,TurboSpinEcho,2570,33,100,140
+knee,file1000858,7,PDFS,,TurboSpinEcho,2570,33,100,140
+knee,file1000858,8,PDFS,,TurboSpinEcho,2570,33,100,140
+knee,file1000858,9,PDFS,,TurboSpinEcho,2570,33,100,140
+knee,file1000858,10,PDFS,,TurboSpinEcho,2570,33,100,140
+knee,file1000858,11,PDFS,,TurboSpinEcho,2570,33,100,140
+knee,file1000858,12,PDFS,,TurboSpinEcho,2570,33,100,140
+knee,file1000858,13,PDFS,,TurboSpinEcho,2570,33,100,140
+knee,file1000858,14,PDFS,Meniscus Tear,TurboSpinEcho,2570,33,100,140
+knee,file1000858,15,PDFS,Meniscus Tear,TurboSpinEcho,2570,33,100,140
+knee,file1000858,16,PDFS,Meniscus Tear,TurboSpinEcho,2570,33,100,140
+knee,file1000858,17,PDFS,Meniscus Tear,TurboSpinEcho,2570,33,100,140
+knee,file1000858,18,PDFS,Meniscus Tear,TurboSpinEcho,2570,33,100,140
+knee,file1000858,19,PDFS,Meniscus Tear,TurboSpinEcho,2570,33,100,140
+knee,file1000858,20,PDFS,Meniscus Tear,TurboSpinEcho,2570,33,100,140
+knee,file1000858,21,PDFS,"Cartilage - Partial Thickness loss/defect, Meniscus Tear",TurboSpinEcho,2570,33,100,140
+knee,file1000858,22,PDFS,Meniscus Tear,TurboSpinEcho,2570,33,100,140
+knee,file1000858,23,PDFS,Meniscus Tear,TurboSpinEcho,2570,33,100,140
+knee,file1000858,24,PDFS,"Meniscus Tear, Meniscus Tear",TurboSpinEcho,2570,33,100,140
+knee,file1000858,25,PDFS,"Meniscus Tear, Meniscus Tear",TurboSpinEcho,2570,33,100,140
+knee,file1000858,26,PDFS,Meniscus Tear,TurboSpinEcho,2570,33,100,140
+knee,file1000858,27,PDFS,,TurboSpinEcho,2570,33,100,140
+knee,file1000858,28,PDFS,,TurboSpinEcho,2570,33,100,140
+knee,file1000858,29,PDFS,,TurboSpinEcho,2570,33,100,140
+knee,file1000858,30,PDFS,,TurboSpinEcho,2570,33,100,140
+knee,file1000858,31,PDFS,,TurboSpinEcho,2570,33,100,140
+knee,file1000858,32,PDFS,,TurboSpinEcho,2570,33,100,140
+knee,file1000871,0,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000871,1,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000871,2,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000871,3,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000871,4,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000871,5,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000871,6,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000871,7,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000871,8,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000871,9,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000871,10,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000871,11,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000871,12,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000871,13,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000871,14,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000871,15,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000871,16,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000871,17,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000871,18,PD,Meniscus Tear,TurboSpinEcho,2800,32,100,140
+knee,file1000871,19,PD,Meniscus Tear,TurboSpinEcho,2800,32,100,140
+knee,file1000871,20,PD,Meniscus Tear,TurboSpinEcho,2800,32,100,140
+knee,file1000871,21,PD,"Cartilage - Partial Thickness loss/defect, Meniscus Tear, Meniscus Tear",TurboSpinEcho,2800,32,100,140
+knee,file1000871,22,PD,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,2800,32,100,140
+knee,file1000871,23,PD,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,2800,32,100,140
+knee,file1000871,24,PD,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,2800,32,100,140
+knee,file1000871,25,PD,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,2800,32,100,140
+knee,file1000871,26,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000871,27,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000871,28,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000871,29,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000871,30,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000871,31,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000871,32,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000871,33,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000885,0,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000885,1,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000885,2,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000885,3,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000885,4,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000885,5,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000885,6,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000885,7,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000885,8,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000885,9,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000885,10,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000885,11,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000885,12,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000885,13,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000885,14,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000885,15,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000885,16,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000885,17,PD,Meniscus Tear,TurboSpinEcho,2800,32,100,140
+knee,file1000885,18,PD,"Cartilage - Partial Thickness loss/defect, Cartilage - Partial Thickness loss/defect, Meniscus Tear",TurboSpinEcho,2800,32,100,140
+knee,file1000885,19,PD,"Cartilage - Partial Thickness loss/defect, Meniscus Tear, Meniscus Tear",TurboSpinEcho,2800,32,100,140
+knee,file1000885,20,PD,"Cartilage - Partial Thickness loss/defect, Meniscus Tear, Meniscus Tear",TurboSpinEcho,2800,32,100,140
+knee,file1000885,21,PD,"Cartilage - Partial Thickness loss/defect, Meniscus Tear, Meniscus Tear",TurboSpinEcho,2800,32,100,140
+knee,file1000885,22,PD,"Meniscus Tear, Meniscus Tear",TurboSpinEcho,2800,32,100,140
+knee,file1000885,23,PD,Meniscus Tear,TurboSpinEcho,2800,32,100,140
+knee,file1000885,24,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000885,25,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000885,26,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000885,27,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000885,28,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000885,29,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000903,0,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000903,1,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000903,2,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000903,3,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000903,4,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000903,5,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000903,6,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000903,7,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000903,8,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000903,9,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000903,10,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000903,11,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000903,12,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000903,13,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000903,14,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000903,15,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000903,16,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000903,17,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000903,18,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000903,19,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000903,20,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000903,21,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000903,22,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000903,23,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000903,24,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000903,25,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000903,26,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000903,27,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000903,28,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000903,29,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000903,30,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000903,31,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000903,32,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1000925,0,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000925,1,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000925,2,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000925,3,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000925,4,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000925,5,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000925,6,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000925,7,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000925,8,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000925,9,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000925,10,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000925,11,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000925,12,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000925,13,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000925,14,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000925,15,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000925,16,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000925,17,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000925,18,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000925,19,PD,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,2800,32,100,140
+knee,file1000925,20,PD,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,2800,32,100,140
+knee,file1000925,21,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000925,22,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000925,23,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000925,24,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000925,25,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000925,26,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000925,27,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000925,28,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000925,29,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1000990,0,PDFS,,TurboSpinEcho,3050,33,100,140
+knee,file1000990,1,PDFS,,TurboSpinEcho,3050,33,100,140
+knee,file1000990,2,PDFS,,TurboSpinEcho,3050,33,100,140
+knee,file1000990,3,PDFS,,TurboSpinEcho,3050,33,100,140
+knee,file1000990,4,PDFS,,TurboSpinEcho,3050,33,100,140
+knee,file1000990,5,PDFS,,TurboSpinEcho,3050,33,100,140
+knee,file1000990,6,PDFS,,TurboSpinEcho,3050,33,100,140
+knee,file1000990,7,PDFS,,TurboSpinEcho,3050,33,100,140
+knee,file1000990,8,PDFS,,TurboSpinEcho,3050,33,100,140
+knee,file1000990,9,PDFS,Joint Effusion ,TurboSpinEcho,3050,33,100,140
+knee,file1000990,10,PDFS,Joint Effusion ,TurboSpinEcho,3050,33,100,140
+knee,file1000990,11,PDFS,"Joint Effusion , Joint Effusion ",TurboSpinEcho,3050,33,100,140
+knee,file1000990,12,PDFS,"Joint Effusion , Joint Effusion ",TurboSpinEcho,3050,33,100,140
+knee,file1000990,13,PDFS,Joint Effusion ,TurboSpinEcho,3050,33,100,140
+knee,file1000990,14,PDFS,Joint Effusion ,TurboSpinEcho,3050,33,100,140
+knee,file1000990,15,PDFS,Joint Effusion ,TurboSpinEcho,3050,33,100,140
+knee,file1000990,16,PDFS,"Cartilage - Partial Thickness loss/defect, Joint Effusion ",TurboSpinEcho,3050,33,100,140
+knee,file1000990,17,PDFS,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,3050,33,100,140
+knee,file1000990,18,PDFS,Meniscus Tear,TurboSpinEcho,3050,33,100,140
+knee,file1000990,19,PDFS,"Meniscus Tear, Meniscus Tear",TurboSpinEcho,3050,33,100,140
+knee,file1000990,20,PDFS,"Meniscus Tear, Meniscus Tear",TurboSpinEcho,3050,33,100,140
+knee,file1000990,21,PDFS,"Meniscus Tear, Meniscus Tear",TurboSpinEcho,3050,33,100,140
+knee,file1000990,22,PDFS,"Meniscus Tear, Meniscus Tear",TurboSpinEcho,3050,33,100,140
+knee,file1000990,23,PDFS,"Meniscus Tear, Meniscus Tear",TurboSpinEcho,3050,33,100,140
+knee,file1000990,24,PDFS,"Cartilage - Partial Thickness loss/defect, Meniscus Tear, Meniscus Tear",TurboSpinEcho,3050,33,100,140
+knee,file1000990,25,PDFS,"Cartilage - Partial Thickness loss/defect, Meniscus Tear, Meniscus Tear",TurboSpinEcho,3050,33,100,140
+knee,file1000990,26,PDFS,"Cartilage - Partial Thickness loss/defect, Meniscus Tear, Meniscus Tear, Bone- Subchondral edema",TurboSpinEcho,3050,33,100,140
+knee,file1000990,27,PDFS,"Cartilage - Partial Thickness loss/defect, Meniscus Tear, Meniscus Tear, Bone- Subchondral edema",TurboSpinEcho,3050,33,100,140
+knee,file1000990,28,PDFS,"Cartilage - Partial Thickness loss/defect, Meniscus Tear, Meniscus Tear",TurboSpinEcho,3050,33,100,140
+knee,file1000990,29,PDFS,"Cartilage - Partial Thickness loss/defect, Meniscus Tear, Meniscus Tear, Meniscus Tear",TurboSpinEcho,3050,33,100,140
+knee,file1000990,30,PDFS,"Meniscus Tear, Meniscus Tear",TurboSpinEcho,3050,33,100,140
+knee,file1000990,31,PDFS,"Meniscus Tear, Meniscus Tear",TurboSpinEcho,3050,33,100,140
+knee,file1000990,32,PDFS,Meniscus Tear,TurboSpinEcho,3050,33,100,140
+knee,file1000990,33,PDFS,Meniscus Tear,TurboSpinEcho,3050,33,100,140
+knee,file1000990,34,PDFS,,TurboSpinEcho,3050,33,100,140
+knee,file1000990,35,PDFS,,TurboSpinEcho,3050,33,100,140
+knee,file1000990,36,PDFS,,TurboSpinEcho,3050,33,100,140
+knee,file1000990,37,PDFS,,TurboSpinEcho,3050,33,100,140
+knee,file1000990,38,PDFS,,TurboSpinEcho,3050,33,100,140
+knee,file1000990,39,PDFS,,TurboSpinEcho,3050,33,100,140
+knee,file1001077,0,PD,,TurboSpinEcho,2400,27,100,140
+knee,file1001077,1,PD,,TurboSpinEcho,2400,27,100,140
+knee,file1001077,2,PD,,TurboSpinEcho,2400,27,100,140
+knee,file1001077,3,PD,,TurboSpinEcho,2400,27,100,140
+knee,file1001077,4,PD,,TurboSpinEcho,2400,27,100,140
+knee,file1001077,5,PD,,TurboSpinEcho,2400,27,100,140
+knee,file1001077,6,PD,,TurboSpinEcho,2400,27,100,140
+knee,file1001077,7,PD,,TurboSpinEcho,2400,27,100,140
+knee,file1001077,8,PD,,TurboSpinEcho,2400,27,100,140
+knee,file1001077,9,PD,,TurboSpinEcho,2400,27,100,140
+knee,file1001077,10,PD,,TurboSpinEcho,2400,27,100,140
+knee,file1001077,11,PD,,TurboSpinEcho,2400,27,100,140
+knee,file1001077,12,PD,,TurboSpinEcho,2400,27,100,140
+knee,file1001077,13,PD,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,2400,27,100,140
+knee,file1001077,14,PD,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,2400,27,100,140
+knee,file1001077,15,PD,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,2400,27,100,140
+knee,file1001077,16,PD,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,2400,27,100,140
+knee,file1001077,17,PD,,TurboSpinEcho,2400,27,100,140
+knee,file1001077,18,PD,,TurboSpinEcho,2400,27,100,140
+knee,file1001077,19,PD,Ligament - ACL High Grade Sprain,TurboSpinEcho,2400,27,100,140
+knee,file1001077,20,PD,Ligament - ACL High Grade Sprain,TurboSpinEcho,2400,27,100,140
+knee,file1001077,21,PD,Ligament - ACL High Grade Sprain,TurboSpinEcho,2400,27,100,140
+knee,file1001077,22,PD,Ligament - ACL High Grade Sprain,TurboSpinEcho,2400,27,100,140
+knee,file1001077,23,PD,"Cartilage - Partial Thickness loss/defect, Ligament - ACL High Grade Sprain",TurboSpinEcho,2400,27,100,140
+knee,file1001077,24,PD,"Cartilage - Partial Thickness loss/defect, Ligament - ACL High Grade Sprain",TurboSpinEcho,2400,27,100,140
+knee,file1001077,25,PD,"Cartilage - Partial Thickness loss/defect, Ligament - ACL High Grade Sprain",TurboSpinEcho,2400,27,100,140
+knee,file1001077,26,PD,,TurboSpinEcho,2400,27,100,140
+knee,file1001077,27,PD,,TurboSpinEcho,2400,27,100,140
+knee,file1001077,28,PD,,TurboSpinEcho,2400,27,100,140
+knee,file1001077,29,PD,,TurboSpinEcho,2400,27,100,140
+knee,file1001077,30,PD,,TurboSpinEcho,2400,27,100,140
+knee,file1001077,31,PD,,TurboSpinEcho,2400,27,100,140
+knee,file1001077,32,PD,,TurboSpinEcho,2400,27,100,140
+knee,file1001077,33,PD,,TurboSpinEcho,2400,27,100,140
+knee,file1001077,34,PD,,TurboSpinEcho,2400,27,100,140
+knee,file1001096,0,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001096,1,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001096,2,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001096,3,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001096,4,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001096,5,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001096,6,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001096,7,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001096,8,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001096,9,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001096,10,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001096,11,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001096,12,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001096,13,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001096,14,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001096,15,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001096,16,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001096,17,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001096,18,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001096,19,PD,"Meniscus Tear, Meniscus Tear",TurboSpinEcho,2800,32,100,140
+knee,file1001096,20,PD,Meniscus Tear,TurboSpinEcho,2800,32,100,140
+knee,file1001096,21,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001096,22,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001096,23,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001096,24,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001096,25,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001096,26,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001096,27,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001096,28,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001096,29,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001096,30,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001096,31,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001096,32,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001096,33,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001104,0,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001104,1,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001104,2,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001104,3,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001104,4,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001104,5,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001104,6,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001104,7,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001104,8,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001104,9,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001104,10,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001104,11,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001104,12,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001104,13,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001104,14,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001104,15,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001104,16,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001104,17,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001104,18,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001104,19,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001104,20,PD,Ligament - MCL Low-Mod Grade Sprain,TurboSpinEcho,2800,32,100,140
+knee,file1001104,21,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001104,22,PD,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,2800,32,100,140
+knee,file1001104,23,PD,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,2800,32,100,140
+knee,file1001104,24,PD,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,2800,32,100,140
+knee,file1001104,25,PD,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,2800,32,100,140
+knee,file1001104,26,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001104,27,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001104,28,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001104,29,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001104,30,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001104,31,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001104,32,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001104,33,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001104,34,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001126,0,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001126,1,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001126,2,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001126,3,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001126,4,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001126,5,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001126,6,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001126,7,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001126,8,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001126,9,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001126,10,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001126,11,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001126,12,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001126,13,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001126,14,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001126,15,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001126,16,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001126,17,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001126,18,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001126,19,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001126,20,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001126,21,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001126,22,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001126,23,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001126,24,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001126,25,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001126,26,PD,"Cartilage - Partial Thickness loss/defect, Meniscus Tear, Bone- Subchondral edema",TurboSpinEcho,2750,27,100,140
+knee,file1001126,27,PD,"Meniscus Tear, Meniscus Tear",TurboSpinEcho,2750,27,100,140
+knee,file1001126,28,PD,"Meniscus Tear, Meniscus Tear",TurboSpinEcho,2750,27,100,140
+knee,file1001126,29,PD,Meniscus Tear,TurboSpinEcho,2750,27,100,140
+knee,file1001126,30,PD,Meniscus Tear,TurboSpinEcho,2750,27,100,140
+knee,file1001126,31,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001126,32,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001126,33,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001126,34,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001126,35,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001126,36,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001126,37,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001126,38,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001126,39,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001144,0,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001144,1,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001144,2,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001144,3,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001144,4,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001144,5,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001144,6,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001144,7,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001144,8,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001144,9,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001144,10,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001144,11,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001144,12,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001144,13,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001144,14,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001144,15,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001144,16,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001144,17,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001144,18,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001144,19,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001144,20,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001144,21,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001144,22,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001144,23,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001144,24,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001144,25,PDFS,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,2870,33,100,140
+knee,file1001144,26,PDFS,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,2870,33,100,140
+knee,file1001144,27,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001144,28,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001144,29,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001144,30,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001144,31,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001144,32,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001144,33,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001144,34,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001148,0,PD,,TurboSpinEcho,2300,32,100,140
+knee,file1001148,1,PD,,TurboSpinEcho,2300,32,100,140
+knee,file1001148,2,PD,,TurboSpinEcho,2300,32,100,140
+knee,file1001148,3,PD,,TurboSpinEcho,2300,32,100,140
+knee,file1001148,4,PD,,TurboSpinEcho,2300,32,100,140
+knee,file1001148,5,PD,,TurboSpinEcho,2300,32,100,140
+knee,file1001148,6,PD,,TurboSpinEcho,2300,32,100,140
+knee,file1001148,7,PD,,TurboSpinEcho,2300,32,100,140
+knee,file1001148,8,PD,,TurboSpinEcho,2300,32,100,140
+knee,file1001148,9,PD,,TurboSpinEcho,2300,32,100,140
+knee,file1001148,10,PD,,TurboSpinEcho,2300,32,100,140
+knee,file1001148,11,PD,,TurboSpinEcho,2300,32,100,140
+knee,file1001148,12,PD,,TurboSpinEcho,2300,32,100,140
+knee,file1001148,13,PD,,TurboSpinEcho,2300,32,100,140
+knee,file1001148,14,PD,,TurboSpinEcho,2300,32,100,140
+knee,file1001148,15,PD,,TurboSpinEcho,2300,32,100,140
+knee,file1001148,16,PD,,TurboSpinEcho,2300,32,100,140
+knee,file1001148,17,PD,,TurboSpinEcho,2300,32,100,140
+knee,file1001148,18,PD,,TurboSpinEcho,2300,32,100,140
+knee,file1001148,19,PD,,TurboSpinEcho,2300,32,100,140
+knee,file1001148,20,PD,,TurboSpinEcho,2300,32,100,140
+knee,file1001148,21,PD,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,2300,32,100,140
+knee,file1001148,22,PD,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,2300,32,100,140
+knee,file1001148,23,PD,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,2300,32,100,140
+knee,file1001148,24,PD,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,2300,32,100,140
+knee,file1001148,25,PD,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,2300,32,100,140
+knee,file1001148,26,PD,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,2300,32,100,140
+knee,file1001148,27,PD,,TurboSpinEcho,2300,32,100,140
+knee,file1001148,28,PD,,TurboSpinEcho,2300,32,100,140
+knee,file1001148,29,PD,,TurboSpinEcho,2300,32,100,140
+knee,file1001148,30,PD,,TurboSpinEcho,2300,32,100,140
+knee,file1001148,31,PD,,TurboSpinEcho,2300,32,100,140
+knee,file1001184,0,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001184,1,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001184,2,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001184,3,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001184,4,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001184,5,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001184,6,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001184,7,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001184,8,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001184,9,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001184,10,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001184,11,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001184,12,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001184,13,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001184,14,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001184,15,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001184,16,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001184,17,PD,Displaced Meniscal Tissue,TurboSpinEcho,2750,27,100,140
+knee,file1001184,18,PD,"Meniscus Tear, Displaced Meniscal Tissue, Ligament - ACL High Grade Sprain",TurboSpinEcho,2750,27,100,140
+knee,file1001184,19,PD,"Cartilage - Partial Thickness loss/defect, Meniscus Tear, Ligament - ACL High Grade Sprain",TurboSpinEcho,2750,27,100,140
+knee,file1001184,20,PD,"Cartilage - Partial Thickness loss/defect, Ligament - ACL High Grade Sprain",TurboSpinEcho,2750,27,100,140
+knee,file1001184,21,PD,"Cartilage - Partial Thickness loss/defect, Ligament - ACL High Grade Sprain, Ligament - MCL Low-Mod Grade Sprain",TurboSpinEcho,2750,27,100,140
+knee,file1001184,22,PD,Ligament - ACL High Grade Sprain,TurboSpinEcho,2750,27,100,140
+knee,file1001184,23,PD,Ligament - ACL High Grade Sprain,TurboSpinEcho,2750,27,100,140
+knee,file1001184,24,PD,Ligament - ACL High Grade Sprain,TurboSpinEcho,2750,27,100,140
+knee,file1001184,25,PD,Ligament - ACL High Grade Sprain,TurboSpinEcho,2750,27,100,140
+knee,file1001184,26,PD,Ligament - ACL High Grade Sprain,TurboSpinEcho,2750,27,100,140
+knee,file1001184,27,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001184,28,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001184,29,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001184,30,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001184,31,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001184,32,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001184,33,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001184,34,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001184,35,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001184,36,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001191,0,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001191,1,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001191,2,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001191,3,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001191,4,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001191,5,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001191,6,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001191,7,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001191,8,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001191,9,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001191,10,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001191,11,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001191,12,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001191,13,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001191,14,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001191,15,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001191,16,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001191,17,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001191,18,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001191,19,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001191,20,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001191,21,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001191,22,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001191,23,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001191,24,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001191,25,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001191,26,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001191,27,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001191,28,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001191,29,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001191,30,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001191,31,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001191,32,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,0,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,1,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,2,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,3,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,4,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,5,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,6,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,7,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,8,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,9,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,10,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,11,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,12,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,13,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,14,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,15,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,16,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,17,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,18,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,19,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,20,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,21,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,22,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,23,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,24,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,25,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,26,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,27,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,28,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,29,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,30,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,31,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,32,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,33,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,34,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,35,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001262,36,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001275,0,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1001275,1,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1001275,2,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1001275,3,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1001275,4,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1001275,5,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1001275,6,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1001275,7,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1001275,8,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1001275,9,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1001275,10,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1001275,11,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1001275,12,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1001275,13,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1001275,14,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1001275,15,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1001275,16,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1001275,17,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1001275,18,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1001275,19,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1001275,20,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1001275,21,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1001275,22,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1001275,23,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1001275,24,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1001275,25,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1001275,26,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1001275,27,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1001275,28,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1001275,29,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1001275,30,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1001275,31,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1001275,32,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1001275,33,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1001275,34,PDFS,,TurboSpinEcho,3060,33,100,150
+knee,file1001429,0,PDFS,,TurboSpinEcho,3120,33,100,140
+knee,file1001429,1,PDFS,,TurboSpinEcho,3120,33,100,140
+knee,file1001429,2,PDFS,,TurboSpinEcho,3120,33,100,140
+knee,file1001429,3,PDFS,,TurboSpinEcho,3120,33,100,140
+knee,file1001429,4,PDFS,,TurboSpinEcho,3120,33,100,140
+knee,file1001429,5,PDFS,,TurboSpinEcho,3120,33,100,140
+knee,file1001429,6,PDFS,,TurboSpinEcho,3120,33,100,140
+knee,file1001429,7,PDFS,,TurboSpinEcho,3120,33,100,140
+knee,file1001429,8,PDFS,,TurboSpinEcho,3120,33,100,140
+knee,file1001429,9,PDFS,,TurboSpinEcho,3120,33,100,140
+knee,file1001429,10,PDFS,,TurboSpinEcho,3120,33,100,140
+knee,file1001429,11,PDFS,,TurboSpinEcho,3120,33,100,140
+knee,file1001429,12,PDFS,,TurboSpinEcho,3120,33,100,140
+knee,file1001429,13,PDFS,,TurboSpinEcho,3120,33,100,140
+knee,file1001429,14,PDFS,,TurboSpinEcho,3120,33,100,140
+knee,file1001429,15,PDFS,,TurboSpinEcho,3120,33,100,140
+knee,file1001429,16,PDFS,"Cartilage - Partial Thickness loss/defect, Bone- Subchondral edema",TurboSpinEcho,3120,33,100,140
+knee,file1001429,17,PDFS,"Cartilage - Partial Thickness loss/defect, Bone- Subchondral edema",TurboSpinEcho,3120,33,100,140
+knee,file1001429,18,PDFS,Bone- Subchondral edema,TurboSpinEcho,3120,33,100,140
+knee,file1001429,19,PDFS,,TurboSpinEcho,3120,33,100,140
+knee,file1001429,20,PDFS,,TurboSpinEcho,3120,33,100,140
+knee,file1001429,21,PDFS,,TurboSpinEcho,3120,33,100,140
+knee,file1001429,22,PDFS,,TurboSpinEcho,3120,33,100,140
+knee,file1001429,23,PDFS,,TurboSpinEcho,3120,33,100,140
+knee,file1001429,24,PDFS,Ligament - ACL Low Grade sprain,TurboSpinEcho,3120,33,100,140
+knee,file1001429,25,PDFS,Ligament - ACL Low Grade sprain,TurboSpinEcho,3120,33,100,140
+knee,file1001429,26,PDFS,Ligament - ACL Low Grade sprain,TurboSpinEcho,3120,33,100,140
+knee,file1001429,27,PDFS,Ligament - ACL Low Grade sprain,TurboSpinEcho,3120,33,100,140
+knee,file1001429,28,PDFS,"Ligament - ACL Low Grade sprain, Cartilage - Partial Thickness loss/defect",TurboSpinEcho,3120,33,100,140
+knee,file1001429,29,PDFS,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,3120,33,100,140
+knee,file1001429,30,PDFS,,TurboSpinEcho,3120,33,100,140
+knee,file1001429,31,PDFS,,TurboSpinEcho,3120,33,100,140
+knee,file1001429,32,PDFS,,TurboSpinEcho,3120,33,100,140
+knee,file1001429,33,PDFS,,TurboSpinEcho,3120,33,100,140
+knee,file1001429,34,PDFS,,TurboSpinEcho,3120,33,100,140
+knee,file1001429,35,PDFS,,TurboSpinEcho,3120,33,100,140
+knee,file1001429,36,PDFS,,TurboSpinEcho,3120,33,100,140
+knee,file1001429,37,PDFS,,TurboSpinEcho,3120,33,100,140
+knee,file1001429,38,PDFS,,TurboSpinEcho,3120,33,100,140
+knee,file1001429,39,PDFS,,TurboSpinEcho,3120,33,100,140
+knee,file1001429,40,PDFS,,TurboSpinEcho,3120,33,100,140
+knee,file1001429,41,PDFS,,TurboSpinEcho,3120,33,100,140
+knee,file1001440,0,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001440,1,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001440,2,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001440,3,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001440,4,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001440,5,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001440,6,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001440,7,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001440,8,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001440,9,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001440,10,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001440,11,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001440,12,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001440,13,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001440,14,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001440,15,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001440,16,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001440,17,PDFS,Meniscus Tear,TurboSpinEcho,2870,33,100,140
+knee,file1001440,18,PDFS,Meniscus Tear,TurboSpinEcho,2870,33,100,140
+knee,file1001440,19,PDFS,Meniscus Tear,TurboSpinEcho,2870,33,100,140
+knee,file1001440,20,PDFS,Meniscus Tear,TurboSpinEcho,2870,33,100,140
+knee,file1001440,21,PDFS,Meniscus Tear,TurboSpinEcho,2870,33,100,140
+knee,file1001440,22,PDFS,Meniscus Tear,TurboSpinEcho,2870,33,100,140
+knee,file1001440,23,PDFS,Meniscus Tear,TurboSpinEcho,2870,33,100,140
+knee,file1001440,24,PDFS,"Cartilage - Partial Thickness loss/defect, Meniscus Tear, Meniscus Tear",TurboSpinEcho,2870,33,100,140
+knee,file1001440,25,PDFS,"Cartilage - Partial Thickness loss/defect, Meniscus Tear",TurboSpinEcho,2870,33,100,140
+knee,file1001440,26,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001440,27,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001440,28,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001440,29,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001440,30,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001440,31,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001440,32,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001444,0,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001444,1,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001444,2,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001444,3,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001444,4,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001444,5,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001444,6,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001444,7,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001444,8,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001444,9,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001444,10,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001444,11,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001444,12,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001444,13,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001444,14,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001444,15,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001444,16,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001444,17,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001444,18,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001444,19,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001444,20,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001444,21,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001444,22,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001444,23,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001444,24,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001444,25,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001444,26,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001444,27,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001444,28,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001444,29,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001444,30,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001444,31,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001444,32,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001444,33,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001444,34,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001450,0,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001450,1,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001450,2,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001450,3,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001450,4,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001450,5,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001450,6,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001450,7,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001450,8,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001450,9,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001450,10,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001450,11,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001450,12,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001450,13,PDFS,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,3000,33,100,150
+knee,file1001450,14,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001450,15,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001450,16,PDFS,Periarticular cysts,TurboSpinEcho,3000,33,100,150
+knee,file1001450,17,PDFS,Periarticular cysts,TurboSpinEcho,3000,33,100,150
+knee,file1001450,18,PDFS,Periarticular cysts,TurboSpinEcho,3000,33,100,150
+knee,file1001450,19,PDFS,Periarticular cysts,TurboSpinEcho,3000,33,100,150
+knee,file1001450,20,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001450,21,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001450,22,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001450,23,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001450,24,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001450,25,PDFS,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,3000,33,100,150
+knee,file1001450,26,PDFS,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,3000,33,100,150
+knee,file1001450,27,PDFS,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,3000,33,100,150
+knee,file1001450,28,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001450,29,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001450,30,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001450,31,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001450,32,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001450,33,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001655,0,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001655,1,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001655,2,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001655,3,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001655,4,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001655,5,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001655,6,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001655,7,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001655,8,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001655,9,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001655,10,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001655,11,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001655,12,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001655,13,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001655,14,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001655,15,PDFS,Bone-Fracture/Contusion/dislocation,TurboSpinEcho,2870,33,100,140
+knee,file1001655,16,PDFS,Bone-Fracture/Contusion/dislocation,TurboSpinEcho,2870,33,100,140
+knee,file1001655,17,PDFS,Bone-Fracture/Contusion/dislocation,TurboSpinEcho,2870,33,100,140
+knee,file1001655,18,PDFS,"Ligament - ACL High Grade Sprain, Bone-Fracture/Contusion/dislocation",TurboSpinEcho,2870,33,100,140
+knee,file1001655,19,PDFS,"Ligament - ACL High Grade Sprain, Bone-Fracture/Contusion/dislocation",TurboSpinEcho,2870,33,100,140
+knee,file1001655,20,PDFS,"Ligament - ACL High Grade Sprain, Ligament - MCL Low-Mod Grade Sprain, Bone-Fracture/Contusion/dislocation",TurboSpinEcho,2870,33,100,140
+knee,file1001655,21,PDFS,"Ligament - ACL High Grade Sprain, Ligament - MCL Low-Mod Grade Sprain, Bone-Fracture/Contusion/dislocation",TurboSpinEcho,2870,33,100,140
+knee,file1001655,22,PDFS,"Ligament - ACL High Grade Sprain, Ligament - MCL Low-Mod Grade Sprain, Bone-Fracture/Contusion/dislocation",TurboSpinEcho,2870,33,100,140
+knee,file1001655,23,PDFS,Ligament - ACL High Grade Sprain,TurboSpinEcho,2870,33,100,140
+knee,file1001655,24,PDFS,Ligament - ACL High Grade Sprain,TurboSpinEcho,2870,33,100,140
+knee,file1001655,25,PDFS,Ligament - ACL High Grade Sprain,TurboSpinEcho,2870,33,100,140
+knee,file1001655,26,PDFS,"Ligament - ACL High Grade Sprain, Bone-Fracture/Contusion/dislocation",TurboSpinEcho,2870,33,100,140
+knee,file1001655,27,PDFS,Bone-Fracture/Contusion/dislocation,TurboSpinEcho,2870,33,100,140
+knee,file1001655,28,PDFS,Bone-Fracture/Contusion/dislocation,TurboSpinEcho,2870,33,100,140
+knee,file1001655,29,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001655,30,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001655,31,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001655,32,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001655,33,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001655,34,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001655,35,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001655,36,PDFS,,TurboSpinEcho,2870,33,100,140
+knee,file1001703,0,PDFS,,TurboSpinEcho,3150,33,100,150
+knee,file1001703,1,PDFS,,TurboSpinEcho,3150,33,100,150
+knee,file1001703,2,PDFS,,TurboSpinEcho,3150,33,100,150
+knee,file1001703,3,PDFS,,TurboSpinEcho,3150,33,100,150
+knee,file1001703,4,PDFS,,TurboSpinEcho,3150,33,100,150
+knee,file1001703,5,PDFS,,TurboSpinEcho,3150,33,100,150
+knee,file1001703,6,PDFS,,TurboSpinEcho,3150,33,100,150
+knee,file1001703,7,PDFS,,TurboSpinEcho,3150,33,100,150
+knee,file1001703,8,PDFS,,TurboSpinEcho,3150,33,100,150
+knee,file1001703,9,PDFS,,TurboSpinEcho,3150,33,100,150
+knee,file1001703,10,PDFS,,TurboSpinEcho,3150,33,100,150
+knee,file1001703,11,PDFS,,TurboSpinEcho,3150,33,100,150
+knee,file1001703,12,PDFS,,TurboSpinEcho,3150,33,100,150
+knee,file1001703,13,PDFS,Bone-Fracture/Contusion/dislocation,TurboSpinEcho,3150,33,100,150
+knee,file1001703,14,PDFS,Bone-Fracture/Contusion/dislocation,TurboSpinEcho,3150,33,100,150
+knee,file1001703,15,PDFS,Bone-Fracture/Contusion/dislocation,TurboSpinEcho,3150,33,100,150
+knee,file1001703,16,PDFS,Bone-Fracture/Contusion/dislocation,TurboSpinEcho,3150,33,100,150
+knee,file1001703,17,PDFS,Bone-Fracture/Contusion/dislocation,TurboSpinEcho,3150,33,100,150
+knee,file1001703,18,PDFS,Bone-Fracture/Contusion/dislocation,TurboSpinEcho,3150,33,100,150
+knee,file1001703,19,PDFS,,TurboSpinEcho,3150,33,100,150
+knee,file1001703,20,PDFS,,TurboSpinEcho,3150,33,100,150
+knee,file1001703,21,PDFS,,TurboSpinEcho,3150,33,100,150
+knee,file1001703,22,PDFS,,TurboSpinEcho,3150,33,100,150
+knee,file1001703,23,PDFS,Meniscus Tear,TurboSpinEcho,3150,33,100,150
+knee,file1001703,24,PDFS,Meniscus Tear,TurboSpinEcho,3150,33,100,150
+knee,file1001703,25,PDFS,,TurboSpinEcho,3150,33,100,150
+knee,file1001703,26,PDFS,,TurboSpinEcho,3150,33,100,150
+knee,file1001703,27,PDFS,,TurboSpinEcho,3150,33,100,150
+knee,file1001703,28,PDFS,,TurboSpinEcho,3150,33,100,150
+knee,file1001703,29,PDFS,,TurboSpinEcho,3150,33,100,150
+knee,file1001703,30,PDFS,,TurboSpinEcho,3150,33,100,150
+knee,file1001703,31,PDFS,,TurboSpinEcho,3150,33,100,150
+knee,file1001703,32,PDFS,,TurboSpinEcho,3150,33,100,150
+knee,file1001703,33,PDFS,,TurboSpinEcho,3150,33,100,150
+knee,file1001703,34,PDFS,,TurboSpinEcho,3150,33,100,150
+knee,file1001703,35,PDFS,,TurboSpinEcho,3150,33,100,150
+knee,file1001930,0,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,1,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,2,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,3,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,4,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,5,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,6,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,7,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,8,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,9,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,10,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,11,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,12,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,13,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,14,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,15,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,16,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,17,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,18,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,19,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,20,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,21,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,22,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,23,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,24,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,25,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,26,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,27,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,28,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,29,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,30,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,31,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,32,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,33,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,34,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,35,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,36,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,37,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,38,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001930,39,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1001968,0,PDFS,,TurboSpinEcho,2830,33,100,140
+knee,file1001968,1,PDFS,,TurboSpinEcho,2830,33,100,140
+knee,file1001968,2,PDFS,,TurboSpinEcho,2830,33,100,140
+knee,file1001968,3,PDFS,,TurboSpinEcho,2830,33,100,140
+knee,file1001968,4,PDFS,,TurboSpinEcho,2830,33,100,140
+knee,file1001968,5,PDFS,,TurboSpinEcho,2830,33,100,140
+knee,file1001968,6,PDFS,,TurboSpinEcho,2830,33,100,140
+knee,file1001968,7,PDFS,,TurboSpinEcho,2830,33,100,140
+knee,file1001968,8,PDFS,,TurboSpinEcho,2830,33,100,140
+knee,file1001968,9,PDFS,,TurboSpinEcho,2830,33,100,140
+knee,file1001968,10,PDFS,,TurboSpinEcho,2830,33,100,140
+knee,file1001968,11,PDFS,,TurboSpinEcho,2830,33,100,140
+knee,file1001968,12,PDFS,,TurboSpinEcho,2830,33,100,140
+knee,file1001968,13,PDFS,,TurboSpinEcho,2830,33,100,140
+knee,file1001968,14,PDFS,,TurboSpinEcho,2830,33,100,140
+knee,file1001968,15,PDFS,,TurboSpinEcho,2830,33,100,140
+knee,file1001968,16,PDFS,,TurboSpinEcho,2830,33,100,140
+knee,file1001968,17,PDFS,,TurboSpinEcho,2830,33,100,140
+knee,file1001968,18,PDFS,,TurboSpinEcho,2830,33,100,140
+knee,file1001968,19,PDFS,,TurboSpinEcho,2830,33,100,140
+knee,file1001968,20,PDFS,,TurboSpinEcho,2830,33,100,140
+knee,file1001968,21,PDFS,Ligament - MCL Low-Mod Grade Sprain,TurboSpinEcho,2830,33,100,140
+knee,file1001968,22,PDFS,Ligament - MCL Low-Mod Grade Sprain,TurboSpinEcho,2830,33,100,140
+knee,file1001968,23,PDFS,Ligament - MCL Low-Mod Grade Sprain,TurboSpinEcho,2830,33,100,140
+knee,file1001968,24,PDFS,Ligament - MCL Low-Mod Grade Sprain,TurboSpinEcho,2830,33,100,140
+knee,file1001968,25,PDFS,,TurboSpinEcho,2830,33,100,140
+knee,file1001968,26,PDFS,,TurboSpinEcho,2830,33,100,140
+knee,file1001968,27,PDFS,,TurboSpinEcho,2830,33,100,140
+knee,file1001968,28,PDFS,,TurboSpinEcho,2830,33,100,140
+knee,file1001968,29,PDFS,,TurboSpinEcho,2830,33,100,140
+knee,file1001968,30,PDFS,,TurboSpinEcho,2830,33,100,140
+knee,file1001968,31,PDFS,,TurboSpinEcho,2830,33,100,140
+knee,file1001968,32,PDFS,,TurboSpinEcho,2830,33,100,140
+knee,file1001968,33,PDFS,,TurboSpinEcho,2830,33,100,140
+knee,file1001968,34,PDFS,,TurboSpinEcho,2830,33,100,140
+knee,file1001968,35,PDFS,,TurboSpinEcho,2830,33,100,140
+knee,file1001968,36,PDFS,,TurboSpinEcho,2830,33,100,140
+knee,file1001968,37,PDFS,,TurboSpinEcho,2830,33,100,140
+knee,file1001977,0,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001977,1,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001977,2,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001977,3,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001977,4,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001977,5,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001977,6,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001977,7,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001977,8,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001977,9,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001977,10,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001977,11,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001977,12,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001977,13,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001977,14,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001977,15,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001977,16,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001977,17,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001977,18,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001977,19,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001977,20,PD,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,2800,32,100,140
+knee,file1001977,21,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001977,22,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001977,23,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001977,24,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001977,25,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001977,26,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001977,27,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001977,28,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001977,29,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001977,30,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001977,31,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1001984,0,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001984,1,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001984,2,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001984,3,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001984,4,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001984,5,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001984,6,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001984,7,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001984,8,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001984,9,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001984,10,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001984,11,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001984,12,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001984,13,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001984,14,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001984,15,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001984,16,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001984,17,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001984,18,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001984,19,PDFS,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,3000,33,100,150
+knee,file1001984,20,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001984,21,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001984,22,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001984,23,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001984,24,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001984,25,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001984,26,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001984,27,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001984,28,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001984,29,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001984,30,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1001984,31,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002257,0,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002257,1,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002257,2,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002257,3,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002257,4,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002257,5,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002257,6,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002257,7,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002257,8,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002257,9,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002257,10,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002257,11,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002257,12,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002257,13,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002257,14,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002257,15,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002257,16,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002257,17,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002257,18,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002257,19,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002257,20,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002257,21,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002257,22,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002257,23,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002257,24,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002257,25,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002257,26,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002257,27,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002257,28,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002257,29,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002280,0,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002280,1,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002280,2,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002280,3,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002280,4,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002280,5,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002280,6,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002280,7,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002280,8,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002280,9,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002280,10,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002280,11,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002280,12,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002280,13,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002280,14,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002280,15,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002280,16,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002280,17,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002280,18,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002280,19,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002280,20,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002280,21,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002280,22,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002280,23,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002280,24,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002280,25,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002280,26,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002280,27,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002280,28,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002280,29,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002280,30,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002280,31,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002280,32,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002280,33,PD,,TurboSpinEcho,2800,32,100,140
+knee,file1002351,0,PD,,TurboSpinEcho,2660,31,100,140
+knee,file1002351,1,PD,,TurboSpinEcho,2660,31,100,140
+knee,file1002351,2,PD,,TurboSpinEcho,2660,31,100,140
+knee,file1002351,3,PD,,TurboSpinEcho,2660,31,100,140
+knee,file1002351,4,PD,,TurboSpinEcho,2660,31,100,140
+knee,file1002351,5,PD,,TurboSpinEcho,2660,31,100,140
+knee,file1002351,6,PD,,TurboSpinEcho,2660,31,100,140
+knee,file1002351,7,PD,,TurboSpinEcho,2660,31,100,140
+knee,file1002351,8,PD,,TurboSpinEcho,2660,31,100,140
+knee,file1002351,9,PD,,TurboSpinEcho,2660,31,100,140
+knee,file1002351,10,PD,,TurboSpinEcho,2660,31,100,140
+knee,file1002351,11,PD,,TurboSpinEcho,2660,31,100,140
+knee,file1002351,12,PD,,TurboSpinEcho,2660,31,100,140
+knee,file1002351,13,PD,,TurboSpinEcho,2660,31,100,140
+knee,file1002351,14,PD,,TurboSpinEcho,2660,31,100,140
+knee,file1002351,15,PD,,TurboSpinEcho,2660,31,100,140
+knee,file1002351,16,PD,,TurboSpinEcho,2660,31,100,140
+knee,file1002351,17,PD,,TurboSpinEcho,2660,31,100,140
+knee,file1002351,18,PD,,TurboSpinEcho,2660,31,100,140
+knee,file1002351,19,PD,"Ligament - ACL Low Grade sprain, Meniscus Tear",TurboSpinEcho,2660,31,100,140
+knee,file1002351,20,PD,"Ligament - ACL Low Grade sprain, Meniscus Tear",TurboSpinEcho,2660,31,100,140
+knee,file1002351,21,PD,"Ligament - ACL Low Grade sprain, Meniscus Tear, Ligament - MCL Low-Mod Grade Sprain",TurboSpinEcho,2660,31,100,140
+knee,file1002351,22,PD,"Ligament - ACL Low Grade sprain, Meniscus Tear, Ligament - MCL Low-Mod Grade Sprain",TurboSpinEcho,2660,31,100,140
+knee,file1002351,23,PD,"Ligament - ACL Low Grade sprain, Meniscus Tear, Ligament - MCL Low-Mod Grade Sprain",TurboSpinEcho,2660,31,100,140
+knee,file1002351,24,PD,"Ligament - ACL Low Grade sprain, Meniscus Tear",TurboSpinEcho,2660,31,100,140
+knee,file1002351,25,PD,"Ligament - ACL Low Grade sprain, Meniscus Tear",TurboSpinEcho,2660,31,100,140
+knee,file1002351,26,PD,Meniscus Tear,TurboSpinEcho,2660,31,100,140
+knee,file1002351,27,PD,Meniscus Tear,TurboSpinEcho,2660,31,100,140
+knee,file1002351,28,PD,,TurboSpinEcho,2660,31,100,140
+knee,file1002351,29,PD,,TurboSpinEcho,2660,31,100,140
+knee,file1002351,30,PD,,TurboSpinEcho,2660,31,100,140
+knee,file1002351,31,PD,,TurboSpinEcho,2660,31,100,140
+knee,file1002351,32,PD,,TurboSpinEcho,2660,31,100,140
+knee,file1002351,33,PD,,TurboSpinEcho,2660,31,100,140
+knee,file1002351,34,PD,,TurboSpinEcho,2660,31,100,140
+knee,file1002351,35,PD,,TurboSpinEcho,2660,31,100,140
+knee,file1002351,36,PD,Periarticular cysts,TurboSpinEcho,2660,31,100,140
+knee,file1002351,37,PD,Periarticular cysts,TurboSpinEcho,2660,31,100,140
+knee,file1002351,38,PD,Periarticular cysts,TurboSpinEcho,2660,31,100,140
+knee,file1002351,39,PD,Periarticular cysts,TurboSpinEcho,2660,31,100,140
+knee,file1002351,40,PD,Periarticular cysts,TurboSpinEcho,2660,31,100,140
+knee,file1002351,41,PD,Periarticular cysts,TurboSpinEcho,2660,31,100,140
+knee,file1002351,42,PD,,TurboSpinEcho,2660,31,100,140
+knee,file1002351,43,PD,,TurboSpinEcho,2660,31,100,140
+knee,file1002351,44,PD,,TurboSpinEcho,2660,31,100,140
+knee,file1002351,45,PD,,TurboSpinEcho,2660,31,100,140
+knee,file1002389,0,PDFS,,TurboSpinEcho,2900,33,100,140
+knee,file1002389,1,PDFS,,TurboSpinEcho,2900,33,100,140
+knee,file1002389,2,PDFS,,TurboSpinEcho,2900,33,100,140
+knee,file1002389,3,PDFS,,TurboSpinEcho,2900,33,100,140
+knee,file1002389,4,PDFS,,TurboSpinEcho,2900,33,100,140
+knee,file1002389,5,PDFS,,TurboSpinEcho,2900,33,100,140
+knee,file1002389,6,PDFS,Bone- Subchondral edema,TurboSpinEcho,2900,33,100,140
+knee,file1002389,7,PDFS,Bone- Subchondral edema,TurboSpinEcho,2900,33,100,140
+knee,file1002389,8,PDFS,Bone- Subchondral edema,TurboSpinEcho,2900,33,100,140
+knee,file1002389,9,PDFS,Bone- Subchondral edema,TurboSpinEcho,2900,33,100,140
+knee,file1002389,10,PDFS,,TurboSpinEcho,2900,33,100,140
+knee,file1002389,11,PDFS,,TurboSpinEcho,2900,33,100,140
+knee,file1002389,12,PDFS,,TurboSpinEcho,2900,33,100,140
+knee,file1002389,13,PDFS,,TurboSpinEcho,2900,33,100,140
+knee,file1002389,14,PDFS,Bone- Subchondral edema,TurboSpinEcho,2900,33,100,140
+knee,file1002389,15,PDFS,"Bone- Subchondral edema, Periarticular cysts",TurboSpinEcho,2900,33,100,140
+knee,file1002389,16,PDFS,"Bone- Subchondral edema, Periarticular cysts",TurboSpinEcho,2900,33,100,140
+knee,file1002389,17,PDFS,Periarticular cysts,TurboSpinEcho,2900,33,100,140
+knee,file1002389,18,PDFS,Periarticular cysts,TurboSpinEcho,2900,33,100,140
+knee,file1002389,19,PDFS,,TurboSpinEcho,2900,33,100,140
+knee,file1002389,20,PDFS,,TurboSpinEcho,2900,33,100,140
+knee,file1002389,21,PDFS,Meniscus Tear,TurboSpinEcho,2900,33,100,140
+knee,file1002389,22,PDFS,Meniscus Tear,TurboSpinEcho,2900,33,100,140
+knee,file1002389,23,PDFS,"Ligament - ACL Low Grade sprain, Meniscus Tear",TurboSpinEcho,2900,33,100,140
+knee,file1002389,24,PDFS,"Ligament - ACL Low Grade sprain, Meniscus Tear, Cartilage - Full Thickness loss/defect, Periarticular cysts",TurboSpinEcho,2900,33,100,140
+knee,file1002389,25,PDFS,"Ligament - ACL Low Grade sprain, Cartilage - Partial Thickness loss/defect, Meniscus Tear, Cartilage - Full Thickness loss/defect, Bone- Subchondral edema",TurboSpinEcho,2900,33,100,140
+knee,file1002389,26,PDFS,"Ligament - ACL Low Grade sprain, Cartilage - Partial Thickness loss/defect, Meniscus Tear, Cartilage - Full Thickness loss/defect, Cartilage - Full Thickness loss/defect, Bone- Subchondral edema, Bone- Subchondral edema",TurboSpinEcho,2900,33,100,140
+knee,file1002389,27,PDFS,"Ligament - ACL Low Grade sprain, Cartilage - Partial Thickness loss/defect, Meniscus Tear, Cartilage - Full Thickness loss/defect, Cartilage - Full Thickness loss/defect, Bone- Subchondral edema, Bone- Subchondral edema",TurboSpinEcho,2900,33,100,140
+knee,file1002389,28,PDFS,"Ligament - ACL Low Grade sprain, Cartilage - Partial Thickness loss/defect, Cartilage - Partial Thickness loss/defect, Meniscus Tear, Cartilage - Full Thickness loss/defect, Bone- Subchondral edema, Bone- Subchondral edema, Periarticular cysts",TurboSpinEcho,2900,33,100,140
+knee,file1002389,29,PDFS,"Cartilage - Partial Thickness loss/defect, Meniscus Tear, Cartilage - Full Thickness loss/defect, Cartilage - Full Thickness loss/defect, Bone- Subchondral edema, Bone- Subchondral edema",TurboSpinEcho,2900,33,100,140
+knee,file1002389,30,PDFS,"Meniscus Tear, Cartilage - Full Thickness loss/defect, Cartilage - Full Thickness loss/defect, Bone- Subchondral edema, Bone- Subchondral edema",TurboSpinEcho,2900,33,100,140
+knee,file1002389,31,PDFS,"Cartilage - Partial Thickness loss/defect, Meniscus Tear, Cartilage - Full Thickness loss/defect",TurboSpinEcho,2900,33,100,140
+knee,file1002389,32,PDFS,"Cartilage - Partial Thickness loss/defect, Meniscus Tear, Meniscus Tear, Periarticular cysts",TurboSpinEcho,2900,33,100,140
+knee,file1002389,33,PDFS,"Meniscus Tear, Periarticular cysts",TurboSpinEcho,2900,33,100,140
+knee,file1002389,34,PDFS,Periarticular cysts,TurboSpinEcho,2900,33,100,140
+knee,file1002389,35,PDFS,Periarticular cysts,TurboSpinEcho,2900,33,100,140
+knee,file1002389,36,PDFS,Periarticular cysts,TurboSpinEcho,2900,33,100,140
+knee,file1002389,37,PDFS,Periarticular cysts,TurboSpinEcho,2900,33,100,140
+knee,file1002389,38,PDFS,Periarticular cysts,TurboSpinEcho,2900,33,100,140
+knee,file1002404,0,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002404,1,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002404,2,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002404,3,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002404,4,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002404,5,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002404,6,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002404,7,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002404,8,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002404,9,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002404,10,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002404,11,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002404,12,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002404,13,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002404,14,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002404,15,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002404,16,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002404,17,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002404,18,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002404,19,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002404,20,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002404,21,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002404,22,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002404,23,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002404,24,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002404,25,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002404,26,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002404,27,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002404,28,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002404,29,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002404,30,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002404,31,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002417,0,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002417,1,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002417,2,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002417,3,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002417,4,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002417,5,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002417,6,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002417,7,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002417,8,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002417,9,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002417,10,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002417,11,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002417,12,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002417,13,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002417,14,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002417,15,PD,"Cartilage - Partial Thickness loss/defect, Meniscus Tear",TurboSpinEcho,2750,27,100,140
+knee,file1002417,16,PD,"Cartilage - Partial Thickness loss/defect, Meniscus Tear",TurboSpinEcho,2750,27,100,140
+knee,file1002417,17,PD,"Meniscus Tear, Cartilage - Full Thickness loss/defect",TurboSpinEcho,2750,27,100,140
+knee,file1002417,18,PD,"Meniscus Tear, Cartilage - Full Thickness loss/defect",TurboSpinEcho,2750,27,100,140
+knee,file1002417,19,PD,"Cartilage - Partial Thickness loss/defect, Meniscus Tear, Cartilage - Full Thickness loss/defect",TurboSpinEcho,2750,27,100,140
+knee,file1002417,20,PD,"Cartilage - Partial Thickness loss/defect, Meniscus Tear, Meniscus Tear, Cartilage - Full Thickness loss/defect",TurboSpinEcho,2750,27,100,140
+knee,file1002417,21,PD,"Cartilage - Partial Thickness loss/defect, Meniscus Tear, Meniscus Tear, Cartilage - Full Thickness loss/defect, Bone- Subchondral edema, Bone- Subchondral edema",TurboSpinEcho,2750,27,100,140
+knee,file1002417,22,PD,"Cartilage - Partial Thickness loss/defect, Meniscus Tear, Meniscus Tear, Cartilage - Full Thickness loss/defect, Bone- Subchondral edema",TurboSpinEcho,2750,27,100,140
+knee,file1002417,23,PD,"Cartilage - Partial Thickness loss/defect, Meniscus Tear, Meniscus Tear, Cartilage - Full Thickness loss/defect, Bone- Subchondral edema",TurboSpinEcho,2750,27,100,140
+knee,file1002417,24,PD,"Meniscus Tear, Meniscus Tear, Cartilage - Full Thickness loss/defect, Bone- Subchondral edema",TurboSpinEcho,2750,27,100,140
+knee,file1002417,25,PD,"Meniscus Tear, Bone- Subchondral edema",TurboSpinEcho,2750,27,100,140
+knee,file1002417,26,PD,Bone- Subchondral edema,TurboSpinEcho,2750,27,100,140
+knee,file1002417,27,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002417,28,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002417,29,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002417,30,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002417,31,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002417,32,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002417,33,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002417,34,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002417,35,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002538,0,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002538,1,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002538,2,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002538,3,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002538,4,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002538,5,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002538,6,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002538,7,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002538,8,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002538,9,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002538,10,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002538,11,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002538,12,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002538,13,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002538,14,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002538,15,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002538,16,PDFS,Meniscus Tear,TurboSpinEcho,3000,33,100,150
+knee,file1002538,17,PDFS,Meniscus Tear,TurboSpinEcho,3000,33,100,150
+knee,file1002538,18,PDFS,Meniscus Tear,TurboSpinEcho,3000,33,100,150
+knee,file1002538,19,PDFS,"Meniscus Tear, Periarticular cysts",TurboSpinEcho,3000,33,100,150
+knee,file1002538,20,PDFS,"Meniscus Tear, Periarticular cysts",TurboSpinEcho,3000,33,100,150
+knee,file1002538,21,PDFS,"Meniscus Tear, Periarticular cysts",TurboSpinEcho,3000,33,100,150
+knee,file1002538,22,PDFS,"Meniscus Tear, Periarticular cysts",TurboSpinEcho,3000,33,100,150
+knee,file1002538,23,PDFS,"Meniscus Tear, Periarticular cysts",TurboSpinEcho,3000,33,100,150
+knee,file1002538,24,PDFS,"Meniscus Tear, Periarticular cysts",TurboSpinEcho,3000,33,100,150
+knee,file1002538,25,PDFS,Periarticular cysts,TurboSpinEcho,3000,33,100,150
+knee,file1002538,26,PDFS,Periarticular cysts,TurboSpinEcho,3000,33,100,150
+knee,file1002538,27,PDFS,Periarticular cysts,TurboSpinEcho,3000,33,100,150
+knee,file1002538,28,PDFS,Periarticular cysts,TurboSpinEcho,3000,33,100,150
+knee,file1002538,29,PDFS,Periarticular cysts,TurboSpinEcho,3000,33,100,150
+knee,file1002538,30,PDFS,Periarticular cysts,TurboSpinEcho,3000,33,100,150
+knee,file1002538,31,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002538,32,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002538,33,PDFS,,TurboSpinEcho,3000,33,100,150
+knee,file1002546,0,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002546,1,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002546,2,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002546,3,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002546,4,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002546,5,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002546,6,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002546,7,PD,Joint Effusion ,TurboSpinEcho,2750,27,100,140
+knee,file1002546,8,PD,Joint Effusion ,TurboSpinEcho,2750,27,100,140
+knee,file1002546,9,PD,Joint Effusion ,TurboSpinEcho,2750,27,100,140
+knee,file1002546,10,PD,"Joint Effusion , Joint Effusion ",TurboSpinEcho,2750,27,100,140
+knee,file1002546,11,PD,"Joint Effusion , Joint Effusion ",TurboSpinEcho,2750,27,100,140
+knee,file1002546,12,PD,"Joint Effusion , Joint Effusion ",TurboSpinEcho,2750,27,100,140
+knee,file1002546,13,PD,"Joint Effusion , Joint Effusion ",TurboSpinEcho,2750,27,100,140
+knee,file1002546,14,PD,"Joint Effusion , Joint Effusion ",TurboSpinEcho,2750,27,100,140
+knee,file1002546,15,PD,Joint Effusion ,TurboSpinEcho,2750,27,100,140
+knee,file1002546,16,PD,Joint Effusion ,TurboSpinEcho,2750,27,100,140
+knee,file1002546,17,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002546,18,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002546,19,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002546,20,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002546,21,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002546,22,PD,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,2750,27,100,140
+knee,file1002546,23,PD,Cartilage - Partial Thickness loss/defect,TurboSpinEcho,2750,27,100,140
+knee,file1002546,24,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002546,25,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002546,26,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002546,27,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002546,28,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002546,29,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002546,30,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002546,31,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002546,32,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002546,33,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002546,34,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002546,35,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002546,36,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002546,37,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002546,38,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002546,39,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002546,40,PD,,TurboSpinEcho,2750,27,100,140
+knee,file1002546,41,PD,,TurboSpinEcho,2750,27,100,140

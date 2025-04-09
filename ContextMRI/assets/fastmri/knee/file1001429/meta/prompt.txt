@@ -1,0 +1,1 @@
+knee, Slice 20, PDFS, Sequence: TurboSpinEcho, TR: 3120, TE: 33, TI: 100, Flip angle: 140

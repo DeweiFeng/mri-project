@@ -1,0 +1,1 @@
+Qdess, Knee, Slice 46, Age: 48, Sex: F, TR: 20.36, TE: 6.428, Flip Angle: 20

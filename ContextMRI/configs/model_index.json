@@ -1,0 +1,21 @@
+{
+  "_class_name": "MRIPipeline",
+  "_diffusers_version": "0.16.0.dev0",
+  "_ignore_files": ["pytorch_model.bin"],
+  "scheduler": [
+    "diffusers",
+    "DDPMScheduler"
+  ],
+  "text_encoder": [
+    "transformers",
+    "CLIPTextModel"
+  ],
+  "tokenizer": [
+    "transformers",
+    "CLIPTokenizer"
+  ],
+  "unet": [
+    "diffusers",
+    "UNet2DConditionModel"
+  ]
+}
