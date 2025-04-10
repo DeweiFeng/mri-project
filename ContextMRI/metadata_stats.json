@@ -1,0 +1,32 @@
+{
+  "anatomy": [
+    "brain"
+  ],
+  "slice_number": {
+    "min": 0.0,
+    "max": 15.0
+  },
+  "contrast": [
+    "AX FLAIR_FBB"
+  ],
+  "sequence": [
+    "TurboSpinEcho"
+  ],
+  "TR": {
+    "min": 9000.0,
+    "max": 9000.0
+  },
+  "TE": {
+    "min": 81.0,
+    "max": 81.0
+  },
+  "TI": {
+    "min": 2500.0,
+    "max": 2500.0
+  },
+  "flip_angle": {
+    "min": 150.0,
+    "max": 150.0
+  },
+  "pathology": []
+}

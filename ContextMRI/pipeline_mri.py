@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 from diffusers import DiffusionPipeline
 from mri.utils import real_to_nchw_comp, nchw_comp_to_real, clear, CG
 import os
+from modules import ConditionEmbedding
 
 
 class MRIDiffusionPipeline(DiffusionPipeline):
@@ -174,7 +175,7 @@ class MRIDiffusionPipeline(DiffusionPipeline):
 
         latents = latents * self.scheduler.init_noise_sigma
         return latents
-
+    
     def denoise_latents(
         self,
         latents,
@@ -184,6 +185,7 @@ class MRIDiffusionPipeline(DiffusionPipeline):
         num_inference_steps,
         guidance_scale,
         negative_prompt_embeds=None,
+        metadata_list: Optional[List[Dict[str, Any]]] = None,  # New parameter
     ):
         num_warmup_steps = len(timesteps) - num_inference_steps * self.scheduler.order
         for i, t in tqdm(enumerate(timesteps), total=len(timesteps)):
@@ -192,8 +194,19 @@ class MRIDiffusionPipeline(DiffusionPipeline):
             )
             latent_model_input = self.scheduler.scale_model_input(latent_model_input, t)
 
+            cur_prompt_embeds = prompt_embeds
+            if metadata_list is not None and hasattr(self.unet, "condition_emb"):
+                cond_emb = self.unet.condition_emb(
+                    metadata_list, 
+                    dtype=latent_model_input.dtype, 
+                    device=latent_model_input.device
+                )
+                cur_prompt_embeds = prompt_embeds + cond_emb.unsqueeze(1)
+
             noise_pred = self.unet(
-                latent_model_input, t, encoder_hidden_states=prompt_embeds
+                latent_model_input, 
+                t, 
+                encoder_hidden_states=cur_prompt_embeds
             )[0]
 
             if guidance_scale > 1:
@@ -208,7 +221,7 @@ class MRIDiffusionPipeline(DiffusionPipeline):
         return latents
 
     @torch.no_grad()
-    def sample(self, prompt, guidance_scale, num_inference_steps, eta=0.0):
+    def sample(self, prompt, guidance_scale, num_inference_steps, eta=0.0,metadata_list: Optional[List[Dict[str, Any]]] = None):
         skip = 1000 // num_inference_steps
 
         # 1. Encode input prompt
@@ -237,7 +250,20 @@ class MRIDiffusionPipeline(DiffusionPipeline):
             at_prev = self.alpha(t - skip)
 
             xt_in = torch.cat([xt] * 2) if guidance_scale > 1 else xt
-            noise_pred = self.unet(xt_in, t, encoder_hidden_states=prompt_embeds)[0]
+            
+            # KEY CHANGE
+            cur_prompt_embeds = prompt_embeds
+            if metadata_list is not None and hasattr(self.unet, "condition_emb"):
+                cond_emb = self.unet.condition_emb(
+                    metadata_list,
+                    dtype=xt_in.dtype,
+                    device=xt_in.device
+                )
+                cur_prompt_embeds = prompt_embeds + cond_emb.unsqueeze(1)
+
+            noise_pred = self.unet(
+                xt_in, t, encoder_hidden_states=cur_prompt_embeds
+            )[0]
             if guidance_scale > 1:
                 noise_pred_uncond, noise_pred_text = noise_pred.chunk(2)
                 noise_pred = noise_pred_uncond + guidance_scale * (
@@ -434,6 +460,7 @@ class MRIDiffusionPipeline(DiffusionPipeline):
         generator: Optional[torch.Generator] = None,
         latents: Optional[torch.Tensor] = None,
         return_dict: bool = True,
+        metadata_list: Optional[List[Dict[str, Any]]] = None,  # <-- New parameter!
     ):
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         height = height or self.unet.sample_size
@@ -473,6 +500,7 @@ class MRIDiffusionPipeline(DiffusionPipeline):
             extra_step_kwargs,
             num_inference_steps,
             guidance_scale,
+            metadata_list=metadata_list  # <-- New!
         )
 
         latents = latents.squeeze().detach().cpu().numpy()

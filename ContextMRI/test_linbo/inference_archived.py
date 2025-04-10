@@ -3,7 +3,6 @@ import argparse
 import os
 import numpy as np
 import matplotlib.pyplot as plt
-import pandas as pd
 from transformers import CLIPTokenizer, CLIPTextModel
 from diffusers import (
     DDPMScheduler,
@@ -11,21 +10,14 @@ from diffusers import (
     DDIMScheduler,
 )
 from pipeline_mri import MRIDiffusionPipeline
+import pandas as pd
 from utils import row_to_text_string_skm_tea, row_to_text_string, save_image
 from mri.utils import real_to_nchw_comp, clear
 
-from modules import ConditionEmbedding
-
-def preprocess_metadata(row_dict):
-    if "slice" in row_dict and "slice_number" not in row_dict:
-        row_dict["slice_number"] = row_dict.pop("slice")
-    return row_dict
-
 
 def main(args):
-    # Set device (note: fix torch.cuda.is_available() call by adding parentheses)
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    
+
+    device = torch.device("cuda" if torch.cuda.is_available else "cpu")
     tokenizer = CLIPTokenizer.from_pretrained(
         args.pretrained_model_name_or_path, subfolder="tokenizer"
     )
@@ -35,8 +27,6 @@ def main(args):
     noise_scheduler = DDPMScheduler.from_pretrained(
         args.pretrained_model_name_or_path, subfolder="scheduler"
     )
-    
-    # Load UNet according to MRI type.
     if args.mri_type == "fastmri":
         unet = UNet2DConditionModel.from_pretrained(
             args.pretrained_model_name_or_path, subfolder="fastmri"
@@ -47,17 +37,6 @@ def main(args):
         )
     else:
         raise ValueError(f"Not supported mri data type {args.mri_type}")
-
-    # NEW: If condition embedding is enabled, attach it to the UNet.
-    if args.enable_condition_emb:
-        # During inference we disable dropout by setting cfg_prob to 0.
-        condition_emb = ConditionEmbedding(
-            dim=unet.config.cross_attention_dim,
-            metadata_stats=args.metadata_stats,
-            cfg_prob=0.0,  # disable dropping during inference
-            cfg_strategy=args.cfg_strategy,
-        )
-        unet.add_module("condition_emb", condition_emb)
 
     unet.eval()
     text_encoder.eval()
@@ -74,41 +53,36 @@ def main(args):
     pipeline.scheduler.set_timesteps(num_inference_steps=args.num_inference_steps)
     pipeline.scheduler.eta = args.eta
 
-    # NEW: Prepare metadata and prompt for conditional MRI generation.
-    # If using auto generation, we fetch a row from CSV, extract both the prompt and raw metadata.
+    # Conditional MRI generation
     if args.use_auto:
         row_index = 10
         if args.mri_type == "fastmri":
             df = pd.read_csv("./assets/metadata_brain_val.csv")
             row = df.iloc[row_index]
             prompts = row_to_text_string(row, p=1.0)
-            raw_metadata = row.to_dict()
-            metadata_list = [preprocess_metadata(raw_metadata)]
+
         elif args.mri_type == "skm-tea":
             df = pd.read_csv("./assets/skm-tea/metadata_val.csv")
             row = df.iloc[row_index]
             prompts = row_to_text_string_skm_tea(row, p=1.0)
-            raw_metadata = row.to_dict()
-            metadata_list = [preprocess_metadata(raw_metadata)]
+
     else:
         prompts = args.meta_prompt
-        metadata_list = None  # If not auto, you may pass in custom metadata if available.
 
     print(f"Generated Image from metadata: {prompts} with CFG scale {args.cfg_scale}")
 
-    # NEW: Pass metadata_list to the pipeline call.
-    print(metadata_list)
     generated_mri = pipeline(
         prompt=[prompts],
         guidance_scale=args.cfg_scale,
-        metadata_list=metadata_list  # <--- New parameter passed in
     )["images"]
 
     # Convert 2-channel image into grayscale
     output = np.abs(real_to_nchw_comp(generated_mri))[0]
     os.makedirs(args.output_dir, exist_ok=True)
     save_image(output, f"{args.output_dir}/sample.png")
-    print(f"Successfully generated image from metadata, saved in {args.output_dir}/sample.png")
+    print(
+        f"Successfully generated image from metadata, saved in {args.output_dir}/sample.png"
+    )
 
 
 if __name__ == "__main__":
@@ -116,10 +90,16 @@ if __name__ == "__main__":
     parser.add_argument("--cfg_scale", type=float, default=1.0)
     parser.add_argument("--eta", type=float, default=0.0)
     parser.add_argument("--num_inference_steps", type=int, default=50)
-    parser.add_argument("--model_config", type=str, default="./configs/model_index.json")
-    parser.add_argument("--pretrained_model_name_or_path", type=str, default="./MRI_checkpoint")
+    parser.add_argument(
+        "--model_config", type=str, default="./configs/model_index.json"
+    )
+    parser.add_argument(
+        "--pretrained_model_name_or_path", type=str, default="D:\Research\data\MRI_checkpoint"
+    )
     parser.add_argument("--output_dir", type=str, default="./output")
-    parser.add_argument("--mri_type", type=str, choices=["fastmri", "skm-tea"], default="fastmri")
+    parser.add_argument(
+        "--mri_type", type=str, choices=["fastmri", "skm-tea"], default="fastmri"
+    )
     parser.add_argument(
         "--use_auto",
         type=bool,
@@ -132,10 +112,5 @@ if __name__ == "__main__":
         default="",
         help="Use customized metadata prompt for generation. Please match the format of the auto generation",
     )
-    # NEW: Add condition embedding arguments to the inference parser.
-    parser.add_argument("--enable_condition_emb", action="store_true", default=False, help="Enable condition embedding during inference.")
-    parser.add_argument("--metadata_stats", type=str, default=None, help="Path to the metadata statistics JSON file for condition embedding.")
-    parser.add_argument("--cfg_strategy", type=str, choices=["joint", "independent"], default="joint", help="Classifier-free guidance strategy for conditioning.")
-    
     args = parser.parse_args()
     main(args)
