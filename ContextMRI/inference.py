@@ -48,16 +48,26 @@ def main(args):
     else:
         raise ValueError(f"Not supported mri data type {args.mri_type}")
 
-    # NEW: If condition embedding is enabled, attach it to the UNet.
+    # NEW
     if args.enable_condition_emb:
-        # During inference we disable dropout by setting cfg_prob to 0.
-        condition_emb = ConditionEmbedding(
-            dim=unet.config.cross_attention_dim,
-            metadata_stats=args.metadata_stats,
-            cfg_prob=0.0,  # disable dropping during inference
-            cfg_strategy=args.cfg_strategy,
-        )
-        unet.add_module("condition_emb", condition_emb)
+        if hasattr(unet, "condition_emb"):
+            print("ConditionEmbedding has already attached to UNet.")
+        else:
+            condition_emb = ConditionEmbedding(
+                dim=unet.config.cross_attention_dim,
+                metadata_stats=args.metadata_stats,
+                cfg_prob=args.inference_cfg_prob,
+                cfg_strategy=args.cfg_strategy,
+            )
+            # NEW: Load the separately-saved weights if the file is provided.
+            if args.condition_emb_weights is not None:
+                weight_dict = torch.load(args.condition_emb_weights, map_location=device)
+                condition_emb.load_state_dict(weight_dict)
+                print("ConditionEmbedding weights loaded from", args.condition_emb_weights)
+            else:
+                print("No condition embedding weights file provided; using random initialization.")
+            unet.add_module("condition_emb", condition_emb)
+            print("ConditionEmbedding attached to UNet.")
 
     unet.eval()
     text_encoder.eval()
@@ -82,6 +92,7 @@ def main(args):
             df = pd.read_csv("./assets/metadata_brain_val.csv")
             row = df.iloc[row_index]
             prompts = row_to_text_string(row, p=1.0)
+            print(prompts)
             raw_metadata = row.to_dict()
             metadata_list = [preprocess_metadata(raw_metadata)]
         elif args.mri_type == "skm-tea":
@@ -94,10 +105,9 @@ def main(args):
         prompts = args.meta_prompt
         metadata_list = None  # If not auto, you may pass in custom metadata if available.
 
-    print(f"Generated Image from metadata: {prompts} with CFG scale {args.cfg_scale}")
+    print(f"Generated Image from metadata prompts: {prompts} and metadata list {metadata_list} with CFG scale {args.cfg_scale}")
 
     # NEW: Pass metadata_list to the pipeline call.
-    print(metadata_list)
     generated_mri = pipeline(
         prompt=[prompts],
         guidance_scale=args.cfg_scale,
@@ -115,7 +125,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="MRI Inference")
     parser.add_argument("--cfg_scale", type=float, default=1.0)
     parser.add_argument("--eta", type=float, default=0.0)
-    parser.add_argument("--num_inference_steps", type=int, default=50)
+    parser.add_argument("--num_inference_steps", type=int, default=10)
     parser.add_argument("--model_config", type=str, default="./configs/model_index.json")
     parser.add_argument("--pretrained_model_name_or_path", type=str, default="./MRI_checkpoint")
     parser.add_argument("--output_dir", type=str, default="./output")
@@ -134,8 +144,26 @@ if __name__ == "__main__":
     )
     # NEW: Add condition embedding arguments to the inference parser.
     parser.add_argument("--enable_condition_emb", action="store_true", default=False, help="Enable condition embedding during inference.")
+    parser.add_argument("--condition_emb_weights", type=str, default=None,
+                        help="Path to the pre-saved ConditionEmbedding weights")
     parser.add_argument("--metadata_stats", type=str, default=None, help="Path to the metadata statistics JSON file for condition embedding.")
     parser.add_argument("--cfg_strategy", type=str, choices=["joint", "independent"], default="joint", help="Classifier-free guidance strategy for conditioning.")
+    parser.add_argument(
+    "--inference_cfg_prob",
+    type=float,
+    default=0.0,
+    help="Drop probability for classifier-free guidance conditioning during inference. Set to 0 to use full condition, or >0 to drop parts."
+)
     
     args = parser.parse_args()
     main(args)
+
+"""
+with cond emb
+python inference.py   --cfg_scale 1.0   --num_inference_steps 100   --model_config ./configs/model_index.json   --pretrained_model_name_or_path D:\Research\data\MRI_checkpoint   --output_dir ./output_cond   --mri_type fastmri   --enable_condition_emb   --metadata_stats ./metadata_stats.json   --use_auto True --condition_emb_weights D:\\Research\\data\\test_ckpt_0410\\converted\\condition\\condition_emb.pth
+"""
+
+"""
+without cond emb
+python inference.py   --cfg_scale 1.0   --num_inference_steps 50   --model_config ./configs/model_index.json   --pretrained_model_name_or_path D:\Research\data\MRI_checkpoint   --output_dir ./output_no_cond   --mri_type fastmri   --metadata_stats ./metadata_stats.json   --use_auto True
+"""

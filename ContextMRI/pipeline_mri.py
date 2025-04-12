@@ -195,6 +195,7 @@ class MRIDiffusionPipeline(DiffusionPipeline):
             latent_model_input = self.scheduler.scale_model_input(latent_model_input, t)
 
             cur_prompt_embeds = prompt_embeds
+            # conditioning embeddings
             if metadata_list is not None and hasattr(self.unet, "condition_emb"):
                 cond_emb = self.unet.condition_emb(
                     metadata_list, 
@@ -374,6 +375,7 @@ class MRIDiffusionPipeline(DiffusionPipeline):
         gamma=5.0,
         CG_iter=5,
         save_dir=None,
+        metadata_list: Optional[List[Dict[str, Any]]] = None  # <-- New parameter
     ):
         skip = 1000 // num_inference_steps
 
@@ -404,8 +406,19 @@ class MRIDiffusionPipeline(DiffusionPipeline):
             at_prev = self.alpha(t - skip)
 
             xt_in = torch.cat([xt] * 2) if cfg_guidance else xt
+            
+            # NEW: Incorporate conditioning metadata if provided.
+            cur_prompt_embeds = prompt_embeds
+            if metadata_list is not None and hasattr(self.unet, "condition_emb"):
+                cond_emb = self.unet.condition_emb(
+                    metadata_list,
+                    dtype=xt_in.dtype,
+                    device=xt_in.device
+                )
+                cur_prompt_embeds = prompt_embeds + cond_emb.unsqueeze(1)
+            
             noise_pred = noise_pred_uncond = self.unet(
-                xt_in, t, encoder_hidden_states=prompt_embeds
+                xt_in, t, encoder_hidden_states=cur_prompt_embeds
             )[0]
 
             if cfg_guidance:
