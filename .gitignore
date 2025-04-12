@@ -172,3 +172,10 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# folders with large files
+fastmri/
+output_cond/
+output_no_cond/
+result/
+result_new/
