@@ -13,6 +13,7 @@ from diffusers import (
 from pipeline_mri import MRIDiffusionPipeline
 from utils import row_to_text_string_skm_tea, row_to_text_string, save_image
 from mri.utils import real_to_nchw_comp, clear
+from safetensors.torch import load_file as safe_load
 
 from modules import ConditionEmbedding
 
@@ -49,25 +50,39 @@ def main(args):
         raise ValueError(f"Not supported mri data type {args.mri_type}")
 
     # NEW
-    if args.enable_condition_emb:
-        if hasattr(unet, "condition_emb"):
-            print("ConditionEmbedding has already attached to UNet.")
+    if args.finetune_folder is not None:
+        converted_folder = os.path.join(args.finetune_folder, "converted")
+        unet_weights_path = os.path.join(converted_folder, "unet", "diffusion_pytorch_model.safetensors")
+        if os.path.exists(unet_weights_path):
+            try:
+                state_dict = safe_load(unet_weights_path)
+            except ImportError:
+                state_dict = torch.load(unet_weights_path, map_location=device)
+            unet.load_state_dict(state_dict, strict=False)
+            print("Finetuned UNet weights loaded from", unet_weights_path)
         else:
-            condition_emb = ConditionEmbedding(
-                dim=unet.config.cross_attention_dim,
-                metadata_stats=args.metadata_stats,
-                cfg_prob=args.inference_cfg_prob,
-                cfg_strategy=args.cfg_strategy,
-            )
-            # NEW: Load the separately-saved weights if the file is provided.
-            if args.condition_emb_weights is not None:
-                weight_dict = torch.load(args.condition_emb_weights, map_location=device)
-                condition_emb.load_state_dict(weight_dict)
-                print("ConditionEmbedding weights loaded from", args.condition_emb_weights)
+            print("UNet weights file not found at", unet_weights_path)
+    
+        if args.enable_condition_emb:
+            if hasattr(unet, "condition_emb"):
+                print("ConditionEmbedding already attached to UNet.")
             else:
-                print("No condition embedding weights file provided; using random initialization.")
-            unet.add_module("condition_emb", condition_emb)
-            print("ConditionEmbedding attached to UNet.")
+                condition_emb = ConditionEmbedding(
+                    dim=unet.config.cross_attention_dim,
+                    metadata_stats=args.metadata_stats,
+                    cfg_prob=args.inference_cfg_prob,
+                    cfg_strategy=args.cfg_strategy,
+                )
+                condition_weights_path = os.path.join(converted_folder, "condition", "condition_emb.pth")
+                if os.path.exists(condition_weights_path):
+                    condition_emb.load_state_dict(torch.load(condition_weights_path, map_location=device))
+                    print("ConditionEmbedding weights loaded from", condition_weights_path)
+                else:
+                    print("ConditionEmbedding weights file not found at", condition_weights_path)
+                unet.add_module("condition_emb", condition_emb)
+                print("ConditionEmbedding attached to UNet.")
+    else:
+        print("No finetune folder provided; using base checkpoint weights.")
 
     unet.eval()
     text_encoder.eval()
@@ -144,8 +159,8 @@ if __name__ == "__main__":
     )
     # NEW: Add condition embedding arguments to the inference parser.
     parser.add_argument("--enable_condition_emb", action="store_true", default=False, help="Enable condition embedding during inference.")
-    parser.add_argument("--condition_emb_weights", type=str, default=None,
-                        help="Path to the pre-saved ConditionEmbedding weights")
+    parser.add_argument("--finetune_folder", type=str, default=None,
+        help="Path to the finetuning folder. This folder should contain a 'converted' subfolder with subfolders 'unet' (with config.json and diffusion_pytorch_model.safetensors) and 'condition' (with condition_emb.pth).")
     parser.add_argument("--metadata_stats", type=str, default=None, help="Path to the metadata statistics JSON file for condition embedding.")
     parser.add_argument("--cfg_strategy", type=str, choices=["joint", "independent"], default="joint", help="Classifier-free guidance strategy for conditioning.")
     parser.add_argument(
@@ -160,7 +175,7 @@ if __name__ == "__main__":
 
 """
 with cond emb
-python inference.py   --cfg_scale 1.0   --num_inference_steps 100   --model_config ./configs/model_index.json   --pretrained_model_name_or_path D:\Research\data\MRI_checkpoint   --output_dir ./output_cond   --mri_type fastmri   --enable_condition_emb   --metadata_stats ./metadata_stats.json   --use_auto True --condition_emb_weights D:\\Research\\data\\test_ckpt_0410\\converted\\condition\\condition_emb.pth
+python inference.py   --cfg_scale 1.0   --num_inference_steps 100   --model_config ./configs/model_index.json   --pretrained_model_name_or_path D:\Research\data\MRI_checkpoint   --output_dir ./output_cond   --mri_type fastmri   --enable_condition_emb   --metadata_stats ./metadata_stats.json --finetune_folder D:\Research\data\test_ckpt_0410
 """
 
 """
