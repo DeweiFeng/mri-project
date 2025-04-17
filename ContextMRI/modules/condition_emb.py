@@ -125,11 +125,14 @@ class ConditionEmbedding(nn.Module):
         with open(metadata_stats, "r") as f:
             metadata_stats = json.load(f)
         self.metadata_stats = metadata_stats
+        self.metadata_type = {}
 
         self.embeddings = nn.ModuleDict()
+        self.empty_embeddings = nn.ParameterDict()
         for key, value in metadata_stats.items():
             if isinstance(value, dict):
                 # Continuous condition embedding
+                self.metadata_type[key] = "continuous"
                 range_min = value["min"]
                 range_max = value["max"]
                 self.embeddings[key] = ContinuousConditionEmbedding(
@@ -140,10 +143,17 @@ class ConditionEmbedding(nn.Module):
                 num_classes = len(value)
                 if num_classes == 0:
                     continue
+                self.metadata_type[key] = "discrete"
                 str_to_idx = {v: i for i, v in enumerate(value)}
                 self.embeddings[key] = DiscreteConditionEmbedding(
                     dim=dim, num_classes=num_classes, str_to_idx=str_to_idx
                 )
+            self.empty_embeddings[key] = nn.Parameter(
+                torch.zeros((1, dim)), requires_grad=True
+            )
+
+        self.sep_token = nn.Parameter(torch.zeros((1, 1, dim)), requires_grad=True)
+        self.layernorm = nn.LayerNorm(dim)
 
     def forward(
         self,
@@ -156,6 +166,8 @@ class ConditionEmbedding(nn.Module):
             dtype = torch.float32
         if device is None:
             device = torch.device("cpu")
+
+        batch_size = len(metadata_list)
 
         batch = defaultdict(list)
         # Convert metadata for the condition embedding
@@ -187,15 +199,24 @@ class ConditionEmbedding(nn.Module):
                     )
 
         drop_indices = None
-        if self.training and self.cfg_prob > 0 and self.cfg_strategy == "joint":
-            drop_indices = torch.randperm(
-                len(metadata_list), device=device
-            ) < self.cfg_prob * len(metadata_list)
+        if (
+            self.training
+            and self.cfg_prob > 0
+            and self.cfg_strategy == "joint"
+            and batch_size > 1
+        ):
+            drop_indices = (
+                torch.randperm(batch_size, device=device) < self.cfg_prob * batch_size
+            )
 
         emb_list = []
         # Compute condition embeddings
-        for key, value in batch.items():
-            # print(f"key: {key}, value: {value}")
+        for key in self.embeddings.keys():
+            if key not in batch:
+                emb_list.append(self.empty_embeddings[key].expand(batch_size, -1))
+                continue
+
+            value = batch[key]
             if len(value) == 0:
                 continue
 
@@ -206,35 +227,38 @@ class ConditionEmbedding(nn.Module):
             elif isinstance(value[0], torch.Tensor):
                 value = torch.stack(value, dim=0).to(dtype=dtype, device=device)
 
-            # print(value)
-
             # value: (B, ) or (B, num_classes)
             emb = self.embeddings[key](value)
-
-            # print(emb)
 
             # CFG
             if (
                 self.training
                 and self.cfg_prob > 0
                 and self.cfg_strategy == "independent"
+                and batch_size > 1
             ):
-                drop_indices = torch.randperm(
-                    len(metadata_list), device=device
-                ) < self.cfg_prob * len(metadata_list)
+                drop_indices = (
+                    torch.randperm(batch_size, device=device)
+                    < self.cfg_prob * batch_size
+                )
             if drop_indices is not None:
-                emb[drop_indices] = 0.0
-
-            # print(emb)
-            # print()
+                emb[drop_indices] = self.empty_embeddings[key].expand(
+                    emb[drop_indices].shape[0], -1
+                )
 
             emb_list.append(emb)
 
-        # print(emb_list)
-
         if len(emb_list) == 0:
-            return torch.zeros(
-                (len(metadata_list), self.dim), dtype=dtype, device=device
+            emb_list = torch.zeros(
+                (batch_size, len(self.embeddings), self.dim),
+                dtype=dtype,
+                device=device,
             )
         else:
-            return torch.stack(emb_list, dim=0).sum(0)
+            emb_list = torch.stack(emb_list, dim=1)
+
+        emb_list = torch.cat(
+            [self.sep_token.expand(emb_list.shape[0], -1, -1), emb_list], dim=1
+        )
+        emb_list = self.layernorm(emb_list)
+        return emb_list

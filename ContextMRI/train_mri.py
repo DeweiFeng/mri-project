@@ -424,9 +424,11 @@ def main(args):
                         metadata_list, dtype=weight_dtype, device=accelerator.device
                     )
                     if text_embeddings is None:
-                        text_embeddings = cond_embeddings.unsqueeze(1)
+                        text_embeddings = cond_embeddings
                     else:
-                        text_embeddings = text_embeddings + cond_embeddings.unsqueeze(1)
+                        text_embeddings = torch.cat(
+                            [text_embeddings, cond_embeddings], dim=1
+                        )
 
                 # Sample noise that we'll add to the latents
                 noise = torch.randn_like(model_input)

@@ -1,0 +1,81 @@
+{
+    "anatomy": [
+        "brain",
+        "knee"
+    ],
+    "slice_number": {
+        "min": 0.0,
+        "max": 30.0
+    },
+    "contrast": [
+        "AX",
+        "AX T1 POST_FBB",
+        "AX T1 PRE_FBB",
+        "AX T2_FBB",
+        "AX FLAIR_FBB",
+        "AX T1_FBB",
+        "PD",
+        "PDFS"
+    ],
+    "sequence": [
+        "TurboSpinEcho",
+        "Flash"
+    ],
+    "TR": {
+        "min": 247.0,
+        "max": 15810.0
+    },
+    "TE": {
+        "min": 2.0,
+        "max": 126.0
+    },
+    "TI": {
+        "min": 100.0,
+        "max": 2500.0
+    },
+    "flip_angle": {
+        "min": 69.0,
+        "max": 180.0
+    },
+    "pathology": [
+        "Nonspecific white matter lesion",
+        "Posttreatment change",
+        "craniotomy",
+        "Nonspecific lesion",
+        "Possible artifact",
+        "Normal for age",
+        "Dural thickening",
+        "Enlarged ventricles",
+        "Edema",
+        "Resection cavity",
+        "Small vessel chronic white matter ischemic change",
+        "mass",
+        "encephalomalacia",
+        "Lacunar infarct",
+        "Extra-axial mass",
+        "Normal variant",
+        "Paranasal sinus opacification",
+        "Craniectomy",
+        "Craniectomy with cranioplasty",
+        "Motion artifact",
+        "Meniscus tear",
+        "Cartilage - partial thickness loss/defect",
+        "Joint effusion",
+        "Bone-fracture/contusion/dislocation",
+        "Bone-subchondral edema",
+        "Periarticular cysts",
+        "Ligament - ACL low grade sprain",
+        "Ligament - ACL high grade sprain",
+        "Cartilage - full thickness loss/defect",
+        "Ligament - MCL low-mod grade sprain",
+        "Displaced meniscal tissue",
+        "Bone - lesion",
+        "LCL complex - low-mod grade sprain",
+        "Ligament - PCL low-mod grade sprain",
+        "Muscle strain",
+        "Soft tissue lesion",
+        "Joint bodies",
+        "Ligament - PCL high grade",
+        "LCL complext - high grade sprain"
+    ]
+}
