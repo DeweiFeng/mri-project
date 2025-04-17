@@ -44,8 +44,7 @@ def main(args):
         unet = UNet2DConditionModel.from_pretrained(args.pretrained_model_name_or_path, subfolder="skm-tea")
     
     if args.finetune_folder is not None:
-        converted_folder = os.path.join(args.finetune_folder, "converted")
-        unet_weights_path = os.path.join(converted_folder, "unet", "diffusion_pytorch_model.safetensors")
+        unet_weights_path = os.path.join(args.finetune_folder, "unet", "diffusion_pytorch_model.safetensors")
                 
         # Load finetuned UNet weights
         if os.path.exists(unet_weights_path):
@@ -69,7 +68,7 @@ def main(args):
                     cfg_prob=args.inference_cfg_prob,
                     cfg_strategy=args.cfg_strategy,
                 )
-                condition_weights_path = os.path.join(converted_folder, "condition", "condition_emb.pth")
+                condition_weights_path = os.path.join(args.finetune_folder, "condition", "condition_emb.pth")
                 if os.path.exists(condition_weights_path):
                     condition_emb.load_state_dict(torch.load(condition_weights_path, map_location=device))
                     print("ConditionEmbedding weights loaded from", condition_weights_path)
@@ -259,7 +258,7 @@ if __name__=='__main__':
     parser.add_argument("--inference_cfg_prob", type=float, default=0.0,
                         help="Drop probability for classifier-free guidance conditioning during inference. Set to 0 for full condition.")
     parser.add_argument('--save_dir', type=str, 
-                        default="./result/recon_complex_multi", help="The directory for saving generated images")
+                        default="./result_new/recon_complex_multi", help="The directory for saving generated images")
     parser.add_argument('--seed', type=int, default=42, help="Seed for reproducible outputs")
     parser.add_argument('--eta', type=float, default=0.8, help="DDIM eta")
     # MRI-related args
