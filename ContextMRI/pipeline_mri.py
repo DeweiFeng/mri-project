@@ -416,16 +416,9 @@ class MRIDiffusionPipeline(DiffusionPipeline):
                 cond_emb = self.unet.condition_emb(
                     metadata_list, dtype=xt_in.dtype, device=xt_in.device
                 )
-<<<<<<< HEAD
-                cur_prompt_embeds = prompt_embeds + cond_emb.unsqueeze(1)
-                print("prompt_embeds shape: ", prompt_embeds.shape)
-                print("cond_emb shape: ", cond_emb.shape)
-            
-=======
                 # cur_prompt_embeds = prompt_embeds + cond_emb.unsqueeze(1)
                 cur_prompt_embeds = torch.cat([prompt_embeds, cond_emb], dim=1)
 
->>>>>>> 160139a3bb027f75ab3043e9a1a13d27e28329b7
             noise_pred = noise_pred_uncond = self.unet(
                 xt_in, t, encoder_hidden_states=cur_prompt_embeds
             )[0]
