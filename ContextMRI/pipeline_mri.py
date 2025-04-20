@@ -416,11 +416,13 @@ class MRIDiffusionPipeline(DiffusionPipeline):
                     device=xt_in.device
                 )
                 cur_prompt_embeds = prompt_embeds + cond_emb.unsqueeze(1)
+                print("prompt_embeds shape: ", prompt_embeds.shape)
+                print("cond_emb shape: ", cond_emb.shape)
             
             noise_pred = noise_pred_uncond = self.unet(
                 xt_in, t, encoder_hidden_states=cur_prompt_embeds
             )[0]
-
+  
             if cfg_guidance:
                 noise_pred_uncond, noise_pred_text = noise_pred.chunk(2)
                 noise_pred = noise_pred_uncond + guidance_scale * (

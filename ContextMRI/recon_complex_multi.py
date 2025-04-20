@@ -140,6 +140,7 @@ def main(args):
             if not isinstance(metadata, list):
                 metadata = [metadata]
             metadata = [preprocess_metadata(md) for md in metadata]
+            print(metadata)
         else:
             metadata = None
 
