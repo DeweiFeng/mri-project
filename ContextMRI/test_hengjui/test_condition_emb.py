@@ -88,6 +88,7 @@ def test_condition_emb(metadata_stats: str):
     if isinstance(emb, torch.Tensor):
         assert emb.shape == (
             2,
+            9,
             emb_dim,
         ), f"Expected shape (2, {emb_dim}), but got {emb.shape}"
     print("Condition embedding test passed. (cfg_strategy: independent)")
@@ -104,6 +105,7 @@ def test_condition_emb(metadata_stats: str):
     if isinstance(emb, torch.Tensor):
         assert emb.shape == (
             2,
+            9,
             emb_dim,
         ), f"Expected shape (2, {emb_dim}), but got {emb.shape}"
     print("Condition embedding test passed. (cfg_strategy: joint)")

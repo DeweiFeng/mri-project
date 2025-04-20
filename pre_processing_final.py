@@ -68,7 +68,6 @@ def process_slice(slice_kspace, calib_width=24, crop_size=320):
         device=sp.Device(-1)
     )
     coil_maps = espirit_app.run()
-    print("coil maps shape: ", coil_maps.shape)
     
     # Coil Combination (MVUE):
     maps_conj = np.conjugate(coil_maps)
@@ -102,6 +101,7 @@ def process_file(file_path, output_root, train=True, calib_width=24, crop_size=3
     split_folder = f"{anatomy}_mvue_320_train" if train else f"{anatomy}_mvue_320_val"
     
     out_slice_dir = os.path.join(output_root, split_folder, "slice", patient_id)
+<<<<<<< HEAD
     out_mps_dir   = os.path.join(output_root, split_folder, "mps",    patient_id)
     out_plots_dir = os.path.join(output_root, split_folder, "plots",  patient_id)
     
@@ -113,12 +113,21 @@ def process_file(file_path, output_root, train=True, calib_width=24, crop_size=3
     with h5py.File(file_path, "r") as hf:
         volume_kspace = hf['kspace'][()]
     print("SHAPE: ", volume_kspace.shape)
+=======
+    out_mps_dir   = os.path.join(output_root, split_folder, "mps", patient_id)
+    os.makedirs(out_slice_dir, exist_ok=True)
+    os.makedirs(out_mps_dir, exist_ok=True)
+    
+    with h5py.File(file_path, "r") as hf:
+        volume_kspace = hf['kspace'][()]
+>>>>>>> 160139a3bb027f75ab3043e9a1a13d27e28329b7
     
     num_slices = volume_kspace.shape[0]
     print(f"Processing patient: {patient_id} | Total slices: {num_slices}")
     
     for slice_idx in range(num_slices):
         slice_kspace = volume_kspace[slice_idx]  # shape: (num_coils, H, W)
+<<<<<<< HEAD
 
         # If plotting, get raw coil-images once per slice
         if show_plots:
@@ -158,6 +167,27 @@ def process_file(file_path, output_root, train=True, calib_width=24, crop_size=3
                 plot_path = os.path.join(out_plots_dir, f"{slice_idx:03d}_coil{coil_idx:02d}.png")
                 fig.savefig(plot_path, bbox_inches='tight')
                 plt.close(fig)
+=======
+        combined_img, coil_maps = process_slice(slice_kspace, calib_width, crop_size)
+        
+        slice_filename = os.path.join(out_slice_dir, f"{slice_idx:03d}.npy")
+        mps_filename   = os.path.join(out_mps_dir, f"{slice_idx:03d}.npy")
+        np.save(slice_filename, combined_img)
+        np.save(mps_filename, coil_maps)
+        
+        if show_plots and slice_idx == 0:
+            fig, axs = plt.subplots(1, 3, figsize=(12,4))
+            axs[0].imshow(np.abs(combined_img), cmap='gray')
+            axs[0].set_title("Combined Image |I|")
+            axs[1].imshow(np.abs(coil_maps[0]), cmap='gray')
+            axs[1].set_title("Coil0 |S|")
+            axs[2].imshow(np.angle(coil_maps[0]), cmap='hsv')
+            axs[2].set_title("Coil0 Phase(S)")
+            for ax in axs: 
+                ax.axis('off')
+            plt.suptitle(f"Patient: {patient_id} | Slice: {slice_idx}")
+            plt.show()
+>>>>>>> 160139a3bb027f75ab3043e9a1a13d27e28329b7
     
     print(f"Finished processing patient: {patient_id}\n  Saved slice data in: {out_slice_dir}\n  Saved mps data in: {out_mps_dir}")
 
@@ -192,4 +222,8 @@ def main():
         )
 
 if __name__ == "__main__":
+<<<<<<< HEAD
     main()
+=======
+    main()
+>>>>>>> 160139a3bb027f75ab3043e9a1a13d27e28329b7

@@ -19,11 +19,11 @@ accelerate launch --num_processes=1 --num_machines=1 train_mri.py \
   --output_dir $output_dir \
   --mixed_precision="fp16" \
   --resolution=320 \
-  --train_batch_size=1 \
-  --gradient_accumulation_steps=1 \
+  --train_batch_size=2 \
+  --gradient_accumulation_steps=4 \
   --learning_rate=5e-5 \
   --report_to="tensorboard" \
-  --lr_scheduler="constant" \
+  --lr_scheduler="linear" \
   --lr_warmup_steps=1000 \
   --max_train_steps=10000 \
   --checkpointing_steps=100 \

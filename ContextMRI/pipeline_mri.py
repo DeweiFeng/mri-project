@@ -175,7 +175,7 @@ class MRIDiffusionPipeline(DiffusionPipeline):
 
         latents = latents * self.scheduler.init_noise_sigma
         return latents
-    
+
     def denoise_latents(
         self,
         latents,
@@ -198,16 +198,15 @@ class MRIDiffusionPipeline(DiffusionPipeline):
             # conditioning embeddings
             if metadata_list is not None and hasattr(self.unet, "condition_emb"):
                 cond_emb = self.unet.condition_emb(
-                    metadata_list, 
-                    dtype=latent_model_input.dtype, 
-                    device=latent_model_input.device
+                    metadata_list,
+                    dtype=latent_model_input.dtype,
+                    device=latent_model_input.device,
                 )
-                cur_prompt_embeds = prompt_embeds + cond_emb.unsqueeze(1)
+                # cur_prompt_embeds = prompt_embeds + cond_emb.unsqueeze(1)
+                cur_prompt_embeds = torch.cat([prompt_embeds, cond_emb], dim=1)
 
             noise_pred = self.unet(
-                latent_model_input, 
-                t, 
-                encoder_hidden_states=cur_prompt_embeds
+                latent_model_input, t, encoder_hidden_states=cur_prompt_embeds
             )[0]
 
             if guidance_scale > 1:
@@ -222,7 +221,14 @@ class MRIDiffusionPipeline(DiffusionPipeline):
         return latents
 
     @torch.no_grad()
-    def sample(self, prompt, guidance_scale, num_inference_steps, eta=0.0,metadata_list: Optional[List[Dict[str, Any]]] = None):
+    def sample(
+        self,
+        prompt,
+        guidance_scale,
+        num_inference_steps,
+        eta=0.0,
+        metadata_list: Optional[List[Dict[str, Any]]] = None,
+    ):
         skip = 1000 // num_inference_steps
 
         # 1. Encode input prompt
@@ -251,20 +257,17 @@ class MRIDiffusionPipeline(DiffusionPipeline):
             at_prev = self.alpha(t - skip)
 
             xt_in = torch.cat([xt] * 2) if guidance_scale > 1 else xt
-            
+
             # KEY CHANGE
             cur_prompt_embeds = prompt_embeds
             if metadata_list is not None and hasattr(self.unet, "condition_emb"):
                 cond_emb = self.unet.condition_emb(
-                    metadata_list,
-                    dtype=xt_in.dtype,
-                    device=xt_in.device
+                    metadata_list, dtype=xt_in.dtype, device=xt_in.device
                 )
-                cur_prompt_embeds = prompt_embeds + cond_emb.unsqueeze(1)
+                # cur_prompt_embeds = prompt_embeds + cond_emb.unsqueeze(1)
+                cur_prompt_embeds = torch.cat([prompt_embeds, cond_emb], dim=1)
 
-            noise_pred = self.unet(
-                xt_in, t, encoder_hidden_states=cur_prompt_embeds
-            )[0]
+            noise_pred = self.unet(xt_in, t, encoder_hidden_states=cur_prompt_embeds)[0]
             if guidance_scale > 1:
                 noise_pred_uncond, noise_pred_text = noise_pred.chunk(2)
                 noise_pred = noise_pred_uncond + guidance_scale * (
@@ -375,7 +378,7 @@ class MRIDiffusionPipeline(DiffusionPipeline):
         gamma=5.0,
         CG_iter=5,
         save_dir=None,
-        metadata_list: Optional[List[Dict[str, Any]]] = None  # <-- New parameter
+        metadata_list: Optional[List[Dict[str, Any]]] = None,  # <-- New parameter
     ):
         skip = 1000 // num_inference_steps
 
@@ -406,19 +409,23 @@ class MRIDiffusionPipeline(DiffusionPipeline):
             at_prev = self.alpha(t - skip)
 
             xt_in = torch.cat([xt] * 2) if cfg_guidance else xt
-            
+
             # NEW: Incorporate conditioning metadata if provided.
             cur_prompt_embeds = prompt_embeds
             if metadata_list is not None and hasattr(self.unet, "condition_emb"):
                 cond_emb = self.unet.condition_emb(
-                    metadata_list,
-                    dtype=xt_in.dtype,
-                    device=xt_in.device
+                    metadata_list, dtype=xt_in.dtype, device=xt_in.device
                 )
+<<<<<<< HEAD
                 cur_prompt_embeds = prompt_embeds + cond_emb.unsqueeze(1)
                 print("prompt_embeds shape: ", prompt_embeds.shape)
                 print("cond_emb shape: ", cond_emb.shape)
             
+=======
+                # cur_prompt_embeds = prompt_embeds + cond_emb.unsqueeze(1)
+                cur_prompt_embeds = torch.cat([prompt_embeds, cond_emb], dim=1)
+
+>>>>>>> 160139a3bb027f75ab3043e9a1a13d27e28329b7
             noise_pred = noise_pred_uncond = self.unet(
                 xt_in, t, encoder_hidden_states=cur_prompt_embeds
             )[0]
@@ -515,7 +522,7 @@ class MRIDiffusionPipeline(DiffusionPipeline):
             extra_step_kwargs,
             num_inference_steps,
             guidance_scale,
-            metadata_list=metadata_list  # <-- New!
+            metadata_list=metadata_list,  # <-- New!
         )
 
         latents = latents.squeeze().detach().cpu().numpy()
