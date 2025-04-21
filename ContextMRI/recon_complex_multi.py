@@ -35,8 +35,18 @@ def main(args):
     json_path = os.path.join(args.save_dir, "summary.json")
   
     device = torch.device("cuda" if torch.cuda.is_available else "cpu")
-    tokenizer = CLIPTokenizer.from_pretrained(args.pretrained_model_name_or_path, subfolder="tokenizer")
-    text_encoder = CLIPTextModel.from_pretrained(args.pretrained_model_name_or_path, subfolder="text_encoder")
+    if args.text_encoder_type == "clip":
+        tokenizer = CLIPTokenizer.from_pretrained(args.pretrained_model_name_or_path, subfolder="tokenizer")
+        text_encoder = CLIPTextModel.from_pretrained(args.pretrained_model_name_or_path, subfolder="text_encoder")
+    else:  # t5
+        from transformers import T5TokenizerFast, T5EncoderModel
+
+        if args.t5_model_name_or_path is None:
+            raise ValueError("`--t5_model_name_or_path` must be set when using T5")
+        tokenizer = T5TokenizerFast.from_pretrained(args.t5_model_name_or_path)
+        tokenizer.model_max_length = 77
+        text_encoder = T5EncoderModel.from_pretrained(args.t5_model_name_or_path)
+        
     noise_scheduler = DDPMScheduler.from_pretrained(args.pretrained_model_name_or_path, subfolder="scheduler")
     if args.mri_type == "fastmri":
         unet = UNet2DConditionModel.from_pretrained(args.pretrained_model_name_or_path, subfolder="fastmri")
@@ -120,8 +130,10 @@ def main(args):
 
 
     psnr_list = []
+    print("LENGTH: ", len(mri_dataloader))
     pbar = tqdm(enumerate(mri_dataloader), total=len(mri_dataloader), desc="Inference")
     for i, batch in pbar:
+
         # 1. extract metadata
         if i < num_resume:
             continue
@@ -242,7 +254,7 @@ if __name__=='__main__':
     parser = argparse.ArgumentParser(description="MRI-Inference-Argument")
     parser.add_argument('--pretrained_model_name_or_path', type=str, default="./MRI_checkpoint", help="directory of checkpoint")
     parser.add_argument('--config_dir', type=str, default="./MRI_checkpoint")
-    parser.add_argument('--num_timesteps', type=int, default=100, help="Number of timesteps for inference")
+    parser.add_argument('--num_timesteps', type=int, default=50, help="Number of timesteps for inference")
     parser.add_argument('--cfg_scale', type=float, default=1.0, help="CFG scale")
     parser.add_argument('--load_dir_meta_knee', type=str, 
                         default="../fastmri-plus/knee/meta/metadata_val.csv",)
@@ -262,6 +274,19 @@ if __name__=='__main__':
                         default="./result_new/recon_complex_multi", help="The directory for saving generated images")
     parser.add_argument('--seed', type=int, default=42, help="Seed for reproducible outputs")
     parser.add_argument('--eta', type=float, default=0.8, help="DDIM eta")
+    parser.add_argument(
+        "--text_encoder_type",
+        type=str,
+        choices=["clip","t5"],
+        default="clip",
+        help="Which text encoder to use (clip or t5).",
+    )
+    parser.add_argument(
+        "--t5_model_name_or_path",
+        type=str,
+        default=None,
+        help="If --text_encoder_type=t5, the HF name or path for the T5EncoderModel.",
+    )
     # MRI-related args
     parser.add_argument('--mask_type', type=str, 
                         default="uniform1d", help="masking type in the Fourier domain")
