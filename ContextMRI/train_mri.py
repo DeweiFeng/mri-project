@@ -220,7 +220,6 @@ def main(args):
             for p in module.parameters():
                 p.requires_grad = True
 
-<<<<<<< HEAD
     weight_dtype = torch.float32
     if args.use_lora:
         unet.to(accelerator.device, dtype=weight_dtype)
@@ -231,8 +230,6 @@ def main(args):
             weight_dtype = torch.bfloat16
     
 
-=======
->>>>>>> 7162f09c8688e2586abfb5a4b6511901d63c1c88
     if torch.backends.mps.is_available() and weight_dtype == torch.bfloat16:
         # due to pytorch#99272, MPS does not yet support bfloat16.
         raise ValueError(
