@@ -1,4 +1,5 @@
 import torch
+import torch.nn as nn
 from torch.nn import functional as F
 
 import argparse
@@ -79,6 +80,40 @@ def encode_text(prompt, tokenizer, model, device, max_length=None):
     return text_embeddings
 
 
+class LoRALinear(nn.Module):
+    def __init__(self, original_linear, r=4, alpha=32):
+        super().__init__()
+        self.original = original_linear
+        self.r = r
+        self.alpha = alpha
+        in_dim = original_linear.in_features
+        out_dim = original_linear.out_features
+        dtype = original_linear.weight.dtype  # Get dtype from original layer
+
+        self.lora_A = nn.Linear(in_dim, r, bias=False).to(dtype)
+        self.lora_B = nn.Linear(r, out_dim, bias=False).to(dtype)
+        self.scaling = self.alpha / self.r
+
+        nn.init.kaiming_uniform_(self.lora_A.weight, a=math.sqrt(5))
+        nn.init.zeros_(self.lora_B.weight)
+
+    def forward(self, x):
+        return self.original(x) + self.scaling * self.lora_B(self.lora_A(x))
+
+
+def apply_lora_to_unet(unet, target_names, r=4, alpha=32):
+    for name, module in unet.named_modules():
+        if any(t in name for t in target_names) and isinstance(module, nn.Linear):
+            parent_name = name.rsplit(".", 1)[0]
+            attr_name = name.split(".")[-1]
+
+            # Get parent module
+            parent = dict(unet.named_modules())[parent_name]
+            original = getattr(parent, attr_name)
+
+            # Replace with LoRA-wrapped Linear
+            setattr(parent, attr_name, LoRALinear(original, r=r, alpha=alpha))
+
 def main(args):
     # Accelerate config
     logging_dir = Path(args.output_dir, args.logging_dir)
@@ -135,6 +170,9 @@ def main(args):
         unet = UNet2DConditionModel.from_pretrained(
             args.pretrained_model_name_or_path, subfolder=args.pretrained_model_type
         )
+    
+    if args.use_lora:
+        apply_lora_to_unet(unet, target_names=["to_q", "to_k", "to_v", "to_out.0"], r=args.rank, alpha=32)
 
     condition_emb = None
     if args.enable_condition_emb:
@@ -146,14 +184,21 @@ def main(args):
         )
         unet.add_module("condition_emb", condition_emb)
 
-    unet.requires_grad_(True)
-    text_encoder.requires_grad_(False)
+    unet.requires_grad_(False)
+    for name, module in unet.named_modules():
+        if isinstance(module, LoRALinear):
+            for p in module.parameters():
+                p.requires_grad = True
 
     weight_dtype = torch.float32
-    if accelerator.mixed_precision == "fp16":
-        weight_dtype = torch.float16
-    elif accelerator.mixed_precision == "bf16":
-        weight_dtype = torch.bfloat16
+    if args.use_lora:
+        unet.to(accelerator.device, dtype=weight_dtype)
+    else:
+        if accelerator.mixed_precision == "fp16":
+            weight_dtype = torch.float16
+        elif accelerator.mixed_precision == "bf16":
+            weight_dtype = torch.bfloat16
+    
 
     if torch.backends.mps.is_available() and weight_dtype == torch.bfloat16:
         # due to pytorch#99272, MPS does not yet support bfloat16.
@@ -187,18 +232,31 @@ def main(args):
                 # Pop weights to avoid duplicate saving
                 weights.pop()
 
-            # Save the full weights of each model
-            torch.save(unet_to_save, os.path.join(output_dir, "unet_weights.pth"))
+            if args.use_lora:
+                # Save UNet (base + lora weights)
+                unet_state = unet.state_dict()
+                torch.save(unet_state, os.path.join(output_dir, "unet_with_lora.pth"))
 
-            # Save EMA weights
-            ema_weights = (
-                ema_unet.module.state_dict()
-                if hasattr(ema_unet, "module")
-                else ema_unet.state_dict()
-            )
-            torch.save(
-                ema_weights, os.path.join(output_dir, "unet_ema_0.999_weights.pth")
-            )
+                # Save EMA if needed
+                ema_weights = (
+                    ema_unet.module.state_dict()
+                    if hasattr(ema_unet, "module")
+                    else ema_unet.state_dict()
+                )
+                torch.save(ema_weights, os.path.join(output_dir, "unet_ema_0.999_weights.pth"))
+            else:
+                # Save the full weights of each model
+                torch.save(unet_to_save, os.path.join(output_dir, "unet_weights.pth"))
+
+                # Save EMA weights
+                ema_weights = (
+                    ema_unet.module.state_dict()
+                    if hasattr(ema_unet, "module")
+                    else ema_unet.state_dict()
+                )
+                torch.save(
+                    ema_weights, os.path.join(output_dir, "unet_ema_0.999_weights.pth")
+                )
 
     def load_model_hook(models, input_dir):
         unet_ = None
@@ -210,7 +268,7 @@ def main(args):
                 unet_ = model
             else:
                 raise ValueError(f"unexpected load model: {model.__class__}")
-
+        
         # Load full weights from the saved state dicts
         unet_state_dict = torch.load(os.path.join(input_dir, "unet_weights.pth"))
 
@@ -222,7 +280,6 @@ def main(args):
             models = [unet_]
             # Upcast trainable parameters to fp32
             cast_training_params(models)
-
         del unet_state_dict
         torch.cuda.empty_cache()
 
@@ -245,9 +302,16 @@ def main(args):
         models = [unet]
         cast_training_params(models, dtype=torch.float32)
 
-    unet_parameters = list(filter(lambda p: p.requires_grad, unet.parameters()))
-    unet_parameters_with_lr = {"params": unet_parameters, "lr": args.learning_rate}
-    params_to_optimize = [unet_parameters_with_lr]
+    if args.use_lora:
+        for name, module in unet.named_modules():
+            if isinstance(module, LoRALinear):
+                module.to(accelerator.device, dtype=weight_dtype)
+        unet_parameters = [p for n, p in unet.named_parameters() if p.requires_grad]
+        params_to_optimize = [{"params": unet_parameters, "lr": args.learning_rate}]
+    else:
+        unet_parameters = list(filter(lambda p: p.requires_grad, unet.parameters()))
+        unet_parameters_with_lr = {"params": unet_parameters, "lr": args.learning_rate}
+        params_to_optimize = [unet_parameters_with_lr]
 
     if not args.optimizer.lower() == "adamw":
         logger.warning(
@@ -394,6 +458,9 @@ def main(args):
         desc="Steps",
         disable=not accelerator.is_local_main_process,
     )
+
+    unet.to(accelerator.device, dtype=weight_dtype)
+    text_encoder.to(accelerator.device, dtype=torch.float32)
 
     for epoch in range(first_epoch, args.num_train_epochs):
         unet.train()
@@ -802,6 +869,12 @@ def parse_args(input_args=None):
         help=(
             "Whether to disable CLIP embedding. If True, the model will not use CLIP embedding."
         ),
+    )
+    parser.add_argument(
+        "--use_lora",
+        action="store_true",
+        default=False,
+        help="Use LoRA to adapt the attention layers for fine-tuning.",
     )
 
     if input_args is not None:
