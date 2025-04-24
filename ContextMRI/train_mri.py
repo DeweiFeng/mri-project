@@ -41,6 +41,7 @@ import wandb
 logging.basicConfig(level=logging.INFO)  # Set the level to INFO
 logger = get_logger(__name__)
 
+from transformers import T5Tokenizer, T5EncoderModel
 
 def collate_fn(examples):
     pixel_values = [example["image"] for example in examples]
@@ -79,6 +80,18 @@ def encode_text(prompt, tokenizer, model, device, max_length=None):
 
     return text_embeddings
 
+# NEW encode T5 here:
+def encode_text_t5(prompts, tokenizer, model, device, max_length=77):
+    inputs = tokenizer(
+        prompts,
+        return_tensors="pt",
+        padding="max_length",
+        truncation=True,
+        max_length=max_length,
+    ).to(device)
+    with torch.no_grad():
+        hidden = model.encoder(**inputs).last_hidden_state  # [B, L, 768]
+    return hidden
 
 class LoRALinear(nn.Module):
     def __init__(self, original_linear, r=4, alpha=32):
@@ -147,14 +160,8 @@ def main(args):
 
     if accelerator.is_main_process:
         if args.output_dir is not None:
-            os.makedirs(args.output_dir, exist_ok=True)
-
-    tokenizer = CLIPTokenizer.from_pretrained(
-        args.pretrained_model_name_or_path, subfolder="tokenizer"
-    )
-    text_encoder = CLIPTextModel.from_pretrained(
-        args.pretrained_model_name_or_path, subfolder="text_encoder"
-    )
+            os.makedirs(args.output_dir, exist_ok=True) 
+    
     noise_scheduler = DDPMScheduler.from_pretrained(
         args.pretrained_model_name_or_path, subfolder="scheduler"
     )
@@ -174,6 +181,29 @@ def main(args):
     if args.use_lora:
         apply_lora_to_unet(unet, target_names=["to_q", "to_k", "to_v", "to_out.0"], r=args.rank, alpha=32)
 
+    weight_dtype = torch.float32
+    if accelerator.mixed_precision == "fp16":
+        weight_dtype = torch.float16
+    elif accelerator.mixed_precision == "bf16":
+        weight_dtype = torch.bfloat16
+
+    # NEW t5 here:
+    text_proj = None
+    if args.text_encoder_type == "clip":
+        tokenizer = CLIPTokenizer.from_pretrained(
+            args.pretrained_model_name_or_path, subfolder="tokenizer"
+        )
+        text_encoder = CLIPTextModel.from_pretrained(
+            args.pretrained_model_name_or_path, subfolder="text_encoder"
+        )
+    else: #'T5'
+        tokenizer = T5Tokenizer.from_pretrained(args.t5_model_name_or_path)
+        text_encoder = T5EncoderModel.from_pretrained(args.t5_model_name_or_path)
+        # optionally freeze T5 entirely if not fine-tuning
+        if not args.finetune_t5:
+            for p in text_encoder.parameters():
+                p.requires_grad = False   
+
     condition_emb = None
     if args.enable_condition_emb:
         condition_emb = ConditionEmbedding(
@@ -190,6 +220,7 @@ def main(args):
             for p in module.parameters():
                 p.requires_grad = True
 
+<<<<<<< HEAD
     weight_dtype = torch.float32
     if args.use_lora:
         unet.to(accelerator.device, dtype=weight_dtype)
@@ -200,6 +231,8 @@ def main(args):
             weight_dtype = torch.bfloat16
     
 
+=======
+>>>>>>> 7162f09c8688e2586abfb5a4b6511901d63c1c88
     if torch.backends.mps.is_available() and weight_dtype == torch.bfloat16:
         # due to pytorch#99272, MPS does not yet support bfloat16.
         raise ValueError(
@@ -307,9 +340,19 @@ def main(args):
             if isinstance(module, LoRALinear):
                 module.to(accelerator.device, dtype=weight_dtype)
         unet_parameters = [p for n, p in unet.named_parameters() if p.requires_grad]
+        if text_proj is not None:
+            unet_parameters += list(text_proj.parameters())
+        if args.text_encoder_type == "t5" and args.finetune_t5:
+            unet_parameters += list(filter(lambda p: p.requires_grad, text_encoder.parameters()))
         params_to_optimize = [{"params": unet_parameters, "lr": args.learning_rate}]
     else:
         unet_parameters = list(filter(lambda p: p.requires_grad, unet.parameters()))
+        # If using T5, ensure the projector (and optionally T5) get optimized
+        if text_proj is not None:
+            unet_parameters += list(text_proj.parameters())
+        if args.text_encoder_type == "t5" and args.finetune_t5:
+            unet_parameters += list(filter(lambda p: p.requires_grad, text_encoder.parameters()))
+
         unet_parameters_with_lr = {"params": unet_parameters, "lr": args.learning_rate}
         params_to_optimize = [unet_parameters_with_lr]
 
@@ -472,15 +515,25 @@ def main(args):
                 prompts = batch["prompts"]
 
                 # encode batch prompts when custom prompts are provided for each image -
+                # NEW T5 here
                 text_embeddings = None
-                if not args.disable_clip_embedding:
-                    text_embeddings = encode_text(
-                        prompts,
-                        tokenizer,
-                        text_encoder,
-                        device=accelerator.device,
-                        max_length=77,
-                    )
+                if not args.disable_embedding:
+                    if args.text_encoder_type == "clip":
+                        text_embeddings = encode_text(
+                            prompts,
+                            tokenizer,
+                            text_encoder,
+                            device=accelerator.device,
+                            max_length=77,
+                        )
+                    else: # t5
+                        text_embeddings = encode_text_t5(
+                            prompts,
+                            tokenizer,
+                            text_encoder,
+                            device=accelerator.device,
+                            max_length=77,
+                        )
                     text_embeddings = text_embeddings.contiguous()
                 model_input = pixel_values.to(dtype=weight_dtype)
 
@@ -863,7 +916,7 @@ def parse_args(input_args=None):
         help=("The strategy for classifier-free guidance."),
     )
     parser.add_argument(
-        "--disable_clip_embedding",
+        "--disable_embedding",
         action="store_true",
         default=False,
         help=(
@@ -875,6 +928,27 @@ def parse_args(input_args=None):
         action="store_true",
         default=False,
         help="Use LoRA to adapt the attention layers for fine-tuning.",
+    )
+
+    # Proposed T5 text embedding
+    parser.add_argument(
+        "--text_encoder_type",
+        type=str,
+        choices=["clip", "t5"],
+        default="clip",
+        help="Which text encoder to use for conditioning: 'clip' or 't5'.",
+    )
+    # only needed if T5 is chosen
+    parser.add_argument(
+        "--t5_model_name_or_path",
+        type=str,
+        default="t5-base",
+        help="HuggingFace ID or path for T5 encoder.",
+    )
+    parser.add_argument(
+        "--finetune_t5",
+        action="store_true",
+        help="If using T5, fine-tune its weights (otherwise keep T5 frozen).",
     )
 
     if input_args is not None:
