@@ -24,6 +24,7 @@ from sigpy.mri import poisson
 from utils import calculate_ssim, calculate_lpips, batch_update_json, set_seed, count_entries_in_json
 
 from modules import ConditionEmbedding
+from train_mri import apply_lora_to_unet
 
 
 def main(args):
@@ -88,6 +89,12 @@ def main(args):
                 print("ConditionEmbedding attached to UNet.")
     else:
         print("No finetune folder provided; using base checkpoint weights.")
+    
+    if args.use_lora:
+        apply_lora_to_unet(unet, target_names=["to_q", "to_k", "to_v", "to_out.0"], r=args.rank, alpha=32)
+        state_dict = torch.load(args.lora_path, map_location="cuda")
+        unet.load_state_dict(state_dict)
+        unet.to(device=device, dtype=torch.float16)
 
     text_encoder.eval()
     unet.eval()
@@ -301,6 +308,24 @@ if __name__=='__main__':
     parser.add_argument('--batch_size', default=1, type=int, help="To keep batch size = 1 if mps data is not always same shape")
     parser.add_argument('--mri_type', type=str, choices=["fastmri", "skm-tea"], default="fastmri")
     parser.add_argument('--model_config', type=str, default="./configs/model_index.json")
+    parser.add_argument(
+        "--use_lora",
+        action="store_true",
+        default=False,
+        help="Use LoRA to adapt the attention layers for fine-tuning.",
+    )
+    parser.add_argument(
+        "--rank",
+        type=int,
+        default=4,
+        help=("The dimension of the LoRA update matrices."),
+    )
+    parser.add_argument(
+        "--lora_path",
+        type=str,
+        default="",
+        help="Path to the LoRA model",
+    )
  
     args = parser.parse_args()
     main(args)
