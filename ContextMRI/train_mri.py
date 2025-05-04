@@ -43,6 +43,7 @@ logger = get_logger(__name__)
 
 from transformers import T5Tokenizer, T5EncoderModel
 
+
 def collate_fn(examples):
     pixel_values = [example["image"] for example in examples]
     prompts = [example["prompt"] for example in examples]
@@ -80,6 +81,7 @@ def encode_text(prompt, tokenizer, model, device, max_length=None):
 
     return text_embeddings
 
+
 # NEW encode T5 here:
 def encode_text_t5(prompts, tokenizer, model, device, max_length=77):
     inputs = tokenizer(
@@ -92,6 +94,7 @@ def encode_text_t5(prompts, tokenizer, model, device, max_length=77):
     with torch.no_grad():
         hidden = model.encoder(**inputs).last_hidden_state  # [B, L, 768]
     return hidden
+
 
 class LoRALinear(nn.Module):
     def __init__(self, original_linear, r=4, alpha=32):
@@ -127,6 +130,7 @@ def apply_lora_to_unet(unet, target_names, r=4, alpha=32):
             # Replace with LoRA-wrapped Linear
             setattr(parent, attr_name, LoRALinear(original, r=r, alpha=alpha))
 
+
 def main(args):
     # Accelerate config
     logging_dir = Path(args.output_dir, args.logging_dir)
@@ -160,8 +164,8 @@ def main(args):
 
     if accelerator.is_main_process:
         if args.output_dir is not None:
-            os.makedirs(args.output_dir, exist_ok=True) 
-    
+            os.makedirs(args.output_dir, exist_ok=True)
+
     noise_scheduler = DDPMScheduler.from_pretrained(
         args.pretrained_model_name_or_path, subfolder="scheduler"
     )
@@ -177,9 +181,14 @@ def main(args):
         unet = UNet2DConditionModel.from_pretrained(
             args.pretrained_model_name_or_path, subfolder=args.pretrained_model_type
         )
-    
+
     if args.use_lora:
-        apply_lora_to_unet(unet, target_names=["to_q", "to_k", "to_v", "to_out.0"], r=args.rank, alpha=32)
+        apply_lora_to_unet(
+            unet,
+            target_names=["to_q", "to_k", "to_v", "to_out.0"],
+            r=args.rank,
+            alpha=32,
+        )
 
     weight_dtype = torch.float32
     if accelerator.mixed_precision == "fp16":
@@ -196,13 +205,13 @@ def main(args):
         text_encoder = CLIPTextModel.from_pretrained(
             args.pretrained_model_name_or_path, subfolder="text_encoder"
         )
-    else: #'T5'
+    else:  #'T5'
         tokenizer = T5Tokenizer.from_pretrained(args.t5_model_name_or_path)
         text_encoder = T5EncoderModel.from_pretrained(args.t5_model_name_or_path)
         # optionally freeze T5 entirely if not fine-tuning
         if not args.finetune_t5:
             for p in text_encoder.parameters():
-                p.requires_grad = False   
+                p.requires_grad = False
 
     condition_emb = None
     if args.enable_condition_emb:
@@ -228,7 +237,6 @@ def main(args):
             weight_dtype = torch.float16
         elif accelerator.mixed_precision == "bf16":
             weight_dtype = torch.bfloat16
-    
 
     if torch.backends.mps.is_available() and weight_dtype == torch.bfloat16:
         # due to pytorch#99272, MPS does not yet support bfloat16.
@@ -273,7 +281,9 @@ def main(args):
                     if hasattr(ema_unet, "module")
                     else ema_unet.state_dict()
                 )
-                torch.save(ema_weights, os.path.join(output_dir, "unet_ema_0.999_weights.pth"))
+                torch.save(
+                    ema_weights, os.path.join(output_dir, "unet_ema_0.999_weights.pth")
+                )
             else:
                 # Save the full weights of each model
                 torch.save(unet_to_save, os.path.join(output_dir, "unet_weights.pth"))
@@ -298,7 +308,7 @@ def main(args):
                 unet_ = model
             else:
                 raise ValueError(f"unexpected load model: {model.__class__}")
-        
+
         # Load full weights from the saved state dicts
         unet_state_dict = torch.load(os.path.join(input_dir, "unet_weights.pth"))
 
@@ -340,7 +350,9 @@ def main(args):
         if text_proj is not None:
             unet_parameters += list(text_proj.parameters())
         if args.text_encoder_type == "t5" and args.finetune_t5:
-            unet_parameters += list(filter(lambda p: p.requires_grad, text_encoder.parameters()))
+            unet_parameters += list(
+                filter(lambda p: p.requires_grad, text_encoder.parameters())
+            )
         params_to_optimize = [{"params": unet_parameters, "lr": args.learning_rate}]
     else:
         unet_parameters = list(filter(lambda p: p.requires_grad, unet.parameters()))
@@ -348,7 +360,9 @@ def main(args):
         if text_proj is not None:
             unet_parameters += list(text_proj.parameters())
         if args.text_encoder_type == "t5" and args.finetune_t5:
-            unet_parameters += list(filter(lambda p: p.requires_grad, text_encoder.parameters()))
+            unet_parameters += list(
+                filter(lambda p: p.requires_grad, text_encoder.parameters())
+            )
 
         unet_parameters_with_lr = {"params": unet_parameters, "lr": args.learning_rate}
         params_to_optimize = [unet_parameters_with_lr]
@@ -523,7 +537,7 @@ def main(args):
                             device=accelerator.device,
                             max_length=77,
                         )
-                    else: # t5
+                    else:  # t5
                         text_embeddings = encode_text_t5(
                             prompts,
                             tokenizer,

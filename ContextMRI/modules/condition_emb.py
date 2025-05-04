@@ -205,9 +205,10 @@ class ConditionEmbedding(nn.Module):
             and self.cfg_strategy == "joint"
             and batch_size > 1
         ):
-            drop_indices = (
-                torch.randperm(batch_size, device=device) < self.cfg_prob * batch_size
-            )
+            # drop_indices = (
+            #     torch.randperm(batch_size, device=device) < self.cfg_prob * batch_size
+            # )
+            drop_indices = torch.rand(batch_size, device=device) < self.cfg_prob
 
         emb_list = []
         # Compute condition embeddings
@@ -221,7 +222,7 @@ class ConditionEmbedding(nn.Module):
                 continue
 
             if isinstance(value[0], float):
-                value = torch.tensor(value, dtype=dtype, device=device)
+                value = torch.tensor(value, dtype=dtype, device=device, requires_grad=True)
             elif isinstance(value[0], int):
                 value = torch.tensor(value, dtype=torch.long, device=device)
             elif isinstance(value[0], torch.Tensor):
@@ -237,10 +238,11 @@ class ConditionEmbedding(nn.Module):
                 and self.cfg_strategy == "independent"
                 and batch_size > 1
             ):
-                drop_indices = (
-                    torch.randperm(batch_size, device=device)
-                    < self.cfg_prob * batch_size
-                )
+                # drop_indices = (
+                #     torch.randperm(batch_size, device=device)
+                #     < self.cfg_prob * batch_size
+                # )
+                drop_indices = torch.rand(batch_size, device=device) < self.cfg_prob
             if drop_indices is not None:
                 emb[drop_indices] = self.empty_embeddings[key].expand(
                     emb[drop_indices].shape[0], -1
