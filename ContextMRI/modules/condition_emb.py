@@ -222,7 +222,7 @@ class ConditionEmbedding(nn.Module):
                 continue
 
             if isinstance(value[0], float):
-                value = torch.tensor(value, dtype=dtype, device=device, requires_grad=True)
+                value = torch.tensor(value, dtype=dtype, device=device)
             elif isinstance(value[0], int):
                 value = torch.tensor(value, dtype=torch.long, device=device)
             elif isinstance(value[0], torch.Tensor):

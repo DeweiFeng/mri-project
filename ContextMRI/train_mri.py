@@ -131,6 +131,14 @@ def apply_lora_to_unet(unet, target_names, r=4, alpha=32):
             setattr(parent, attr_name, LoRALinear(original, r=r, alpha=alpha))
 
 
+def count_parameters(model):
+    return sum(p.numel() for p in model.parameters() if p.requires_grad)
+
+
+def count_parameters_list(params):
+    return sum(p.numel() for p in params if p.requires_grad)
+
+
 def main(args):
     # Accelerate config
     logging_dir = Path(args.output_dir, args.logging_dir)
@@ -171,7 +179,7 @@ def main(args):
     )
 
     if args.pretrained_model_type is None:
-        print("Training from scratch")
+        logger.info("Training from scratch")
         unet_config_path = "./configs/unet/config_mri.json"
         with open(unet_config_path, "r") as f:
             unet_config = json.load(f)
@@ -186,15 +194,9 @@ def main(args):
         apply_lora_to_unet(
             unet,
             target_names=["to_q", "to_k", "to_v", "to_out.0"],
-            r=args.rank,
+            r=args.lora_rank,
             alpha=32,
         )
-
-    weight_dtype = torch.float32
-    if accelerator.mixed_precision == "fp16":
-        weight_dtype = torch.float16
-    elif accelerator.mixed_precision == "bf16":
-        weight_dtype = torch.bfloat16
 
     # NEW t5 here:
     text_proj = None
@@ -205,6 +207,7 @@ def main(args):
         text_encoder = CLIPTextModel.from_pretrained(
             args.pretrained_model_name_or_path, subfolder="text_encoder"
         )
+        text_encoder.requires_grad_(False)
     else:  #'T5'
         tokenizer = T5Tokenizer.from_pretrained(args.t5_model_name_or_path)
         text_encoder = T5EncoderModel.from_pretrained(args.t5_model_name_or_path)
@@ -222,12 +225,16 @@ def main(args):
             cfg_strategy=args.cfg_strategy,
         )
         unet.add_module("condition_emb", condition_emb)
+        logger.info(
+            f"Condition embedding parameters: {count_parameters(condition_emb)}"
+        )
 
-    unet.requires_grad_(False)
-    for name, module in unet.named_modules():
-        if isinstance(module, LoRALinear):
-            for p in module.parameters():
-                p.requires_grad = True
+    if args.use_lora:
+        unet.requires_grad_(False)
+        for name, module in unet.named_modules():
+            if isinstance(module, (LoRALinear, ConditionEmbedding)):
+                for p in module.parameters():
+                    p.requires_grad = True
 
     weight_dtype = torch.float32
     if args.use_lora:
@@ -243,6 +250,9 @@ def main(args):
         raise ValueError(
             "Mixed precision training with bfloat16 is not supported on MPS. Please use fp16 (recommended) or fp32 instead."
         )
+
+    logger.info(f"UNet trainable parameters: {count_parameters(unet)}")
+    logger.info(f"Text encoder trainable parameters: {count_parameters(text_encoder)}")
 
     unet.to(accelerator.device)
     text_encoder.to(accelerator.device, dtype=weight_dtype)
@@ -353,6 +363,9 @@ def main(args):
             unet_parameters += list(
                 filter(lambda p: p.requires_grad, text_encoder.parameters())
             )
+        logger.info(
+            f"UNet trainable parameters (with LoRA): {count_parameters_list(unet_parameters)}"
+        )
         params_to_optimize = [{"params": unet_parameters, "lr": args.learning_rate}]
     else:
         unet_parameters = list(filter(lambda p: p.requires_grad, unet.parameters()))
@@ -363,7 +376,9 @@ def main(args):
             unet_parameters += list(
                 filter(lambda p: p.requires_grad, text_encoder.parameters())
             )
-
+        logger.info(
+            f"UNet trainable parameters (no LoRA): {count_parameters_list(unet_parameters)}"
+        )
         unet_parameters_with_lr = {"params": unet_parameters, "lr": args.learning_rate}
         params_to_optimize = [unet_parameters_with_lr]
 
@@ -551,7 +566,11 @@ def main(args):
                 # conditioning embeddings
                 if args.enable_condition_emb:
                     metadata_list = batch["metadata_list"]
-                    cond_embeddings = unet.condition_emb(
+                    if isinstance(unet, torch.nn.parallel.DistributedDataParallel):
+                        condition_emb_module = unet.module.condition_emb
+                    else:
+                        condition_emb_module = unet.condition_emb
+                    cond_embeddings = condition_emb_module(
                         metadata_list, dtype=weight_dtype, device=accelerator.device
                     )
                     if text_embeddings is None:
@@ -704,7 +723,7 @@ def parse_args(input_args=None):
         help=("A folder containing the training data. "),
     )
     parser.add_argument(
-        "--rank",
+        "--lora_rank",
         type=int,
         default=4,
         help=("The dimension of the LoRA update matrices."),
