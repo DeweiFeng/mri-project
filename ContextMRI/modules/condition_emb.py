@@ -228,8 +228,18 @@ class ConditionEmbedding(nn.Module):
             elif isinstance(value[0], torch.Tensor):
                 value = torch.stack(value, dim=0).to(dtype=dtype, device=device)
 
+            nan_indices = torch.isnan(value)
+            if nan_indices.any():
+                value[nan_indices] = 0
+
             # value: (B, ) or (B, num_classes)
             emb = self.embeddings[key](value)
+
+            # check for nan values in value and change them to empty embedding
+            if nan_indices.any():
+                emb[nan_indices] = self.empty_embeddings[key].expand(
+                    emb[nan_indices].shape[0], -1
+                )
 
             # CFG
             if (
