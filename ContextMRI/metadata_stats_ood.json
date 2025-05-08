@@ -1,0 +1,42 @@
+{
+  "anatomy": [
+    "heart",
+    "brain"
+  ],
+  "slice_number": {
+    "min": 0.0,
+    "max": 31.0
+  },
+  "contrast": [
+    "Balanced steady-state free precession",
+    "AX",
+    "AX T1 POST_FBB",
+    "AX T1 PRE_FBB",
+    "AX T2_FBB",
+    "AX FLAIR_FBB",
+    "AX T1_FBB"
+  ],
+  "sequence": [
+    "Long axis CINE",
+    "Short axis CINE",
+    "TurboSpinEcho",
+    "Flash"
+  ],
+  "TR": {
+    "min": 38.64,
+    "max": 9000.0
+  },
+  "TE": {
+    "min": 1.41,
+    "max": 113.0
+  },
+  "TI": {
+    "min": 100.0,
+    "max": 2500.0
+  },
+  "flip_angle": {
+    "min": 39.0,
+    "max": 180.0
+  },
+  "pathology": []
+}
