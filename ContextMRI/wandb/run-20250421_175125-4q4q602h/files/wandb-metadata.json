@@ -1,0 +1,75 @@
+{
+  "os": "Windows-10-10.0.22631-SP0",
+  "python": "CPython 3.10.16",
+  "startedAt": "2025-04-21T21:51:25.164728Z",
+  "args": [
+    "--pretrained_model_name_or_path",
+    "D:/Research/data/MRI_checkpoint",
+    "--pretrained_model_type",
+    "fastmri",
+    "--data_root",
+    "D:/Research/data/fastmri/fastmri/brain_mvue_320_train",
+    "--mri_metadata_dir_brain",
+    "D:/Research/data/metadata_brain_train.csv",
+    "--output_dir",
+    "D:/Research/data/",
+    "--mixed_precision=fp16",
+    "--resolution=320",
+    "--train_batch_size=1",
+    "--gradient_accumulation_steps=1",
+    "--learning_rate=5e-5",
+    "--report_to=tensorboard",
+    "--lr_scheduler=constant",
+    "--lr_warmup_steps=1000",
+    "--max_train_steps=10000",
+    "--checkpointing_steps=1000",
+    "--seed=42",
+    "--metadata_stats",
+    "D:/Research/data/Test_1/metadata_stats.json",
+    "--cfg_prob",
+    "0.5",
+    "--cfg_strategy",
+    "joint",
+    "--text_encoder_type",
+    "t5",
+    "--t5_model_name_or_path",
+    "D:/Research/data/t5"
+  ],
+  "program": "D:\\Research\\mri-project\\ContextMRI\\train_mri.py",
+  "codePath": "ContextMRI\\train_mri.py",
+  "git": {
+    "remote": "https://github.com/DeweiFeng/mri-project.git",
+    "commit": "379ee25740830c49be893511ebd81084194f4655"
+  },
+  "email": "linbotang0204@gmail.com",
+  "root": "D:\\Research\\mri-project\\ContextMRI",
+  "host": "DESKTOP-FI85LE6",
+  "executable": "D:\\Miniconda\\envs\\contextmri\\python.exe",
+  "codePathLocal": "train_mri.py",
+  "cpu_count": 24,
+  "cpu_count_logical": 32,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "549754761216",
+      "used": "122960650240"
+    }
+  },
+  "memory": {
+    "total": "34120699904"
+  },
+  "cpu": {
+    "count": 24,
+    "countLogical": 32
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce RTX 4090",
+      "memoryTotal": "25757220864",
+      "cudaCores": 16384,
+      "architecture": "Ada"
+    }
+  ],
+  "cudaVersion": "12.6"
+}

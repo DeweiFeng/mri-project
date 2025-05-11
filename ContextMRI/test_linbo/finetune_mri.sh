@@ -26,7 +26,6 @@ accelerate launch --num_processes=1 --num_machines=1 train_mri.py \
   --max_train_steps=10000 \
   --checkpointing_steps=1000 \
   --seed="42" \
-  --enable_condition_emb \
   --metadata_stats D:/Research/data/Test_1/metadata_stats.json \
   --cfg_prob 0.5 \
   --cfg_strategy "joint" \

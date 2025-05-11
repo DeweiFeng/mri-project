@@ -81,7 +81,9 @@ def main(args):
                 )
                 condition_weights_path = os.path.join(args.finetune_folder, "condition", "condition_emb.pth")
                 if os.path.exists(condition_weights_path):
-                    condition_emb.load_state_dict(torch.load(condition_weights_path, map_location=device))
+                    state_dict = torch.load(condition_weights_path, map_location=device)
+                    missing_keys, unexpected_keys = condition_emb.load_state_dict(state_dict, strict=False)
+                    print("Ablation study not strictly load")
                     print("ConditionEmbedding weights loaded from", condition_weights_path)
                 else:
                     print("ConditionEmbedding weights file not found at", condition_weights_path)
@@ -124,11 +126,12 @@ def main(args):
 
     num_resume = count_entries_in_json(json_path)
 
-    def preprocess_metadata(metadata_dict):
-        # Iterate over all key-value pairs in the dictionary.
+    def preprocess_metadata(metadata_dict, keys_to_drop=None):
         new_dict = {}
+        keys_to_drop = set(keys_to_drop or [])
         for key, value in metadata_dict.items():
-            # If the value is a torch.Tensor, convert it to a Python scalar.
+            if key in keys_to_drop:
+                continue
             if isinstance(value, torch.Tensor):
                 new_dict[key] = value.item()
             else:
@@ -158,7 +161,7 @@ def main(args):
             metadata = batch["metadata"]
             if not isinstance(metadata, list):
                 metadata = [metadata]
-            metadata = [preprocess_metadata(md) for md in metadata]
+                metadata = [preprocess_metadata(md, keys_to_drop=args.drop_metadata_keys) for md in metadata]
             print(metadata)
         else:
             metadata = None
@@ -325,6 +328,12 @@ if __name__=='__main__':
         type=str,
         default="",
         help="Path to the LoRA model",
+    )
+    parser.add_argument(
+        "--drop_metadata_keys",
+        nargs="*",
+        default=[],
+        help="List of metadata keys to drop before inference. Example: --drop_metadata_keys TR TE",
     )
  
     args = parser.parse_args()
