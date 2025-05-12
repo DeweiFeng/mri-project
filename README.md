@@ -28,3 +28,61 @@ python pre_processing_final.py --input_dir /path/to/fastmri/h5_files --output_ro
 python pre_process_cmrx.py --input_dir /path/to/cmrxrecon_data --output_dir ./fastmri
 ```
 
+# Training:
+
+# Basic Training (ContextMRI baseline)
+```bash
+python train_mri.py \
+  --pretrained_model_name_or_path MRI_checkpoint \
+  --pretrained_model_type "fastmri" \
+  --data_root ./fastmri \
+  --mri_metadata_dir_brain ./metadata_brain_train.csv \
+  --mri_metadata_dir_knee ./metadata_knee_train.csv \
+  --output_dir ./output \
+```
+
+# Training with Fine-Grained Metadata Conditioning
+```bash
+python train_mri.py \
+  --pretrained_model_name_or_path MRI_checkpoint \
+  --pretrained_model_type "fastmri" \
+  --data_root ./fastmri \
+  --mri_metadata_dir_brain ./metadata_brain_train.csv \
+  --enable_condition_emb \
+  --metadata_stats ./metadata_stats.json \
+  --cfg_prob 0.5 \
+  --cfg_strategy "independent"
+```
+
+# Training with Out-of-Distribution Data
+```bash
+python train_mri_ood.py \
+  --pretrained_model_name_or_path MRI_checkpoint \
+  --pretrained_model_type "fastmri" \
+  --data_root ./fastmri \
+  --mri_metadata_dir_brain ./metadata_brain_train.csv \
+  --cardio_data_root ./fastmri \
+  --mri_metadata_dir_cardio ./metadata_cardiology_train.csv \
+  --use_ood \
+  --enable_condition_emb \
+  --metadata_stats ./metadata_stats_ood.json \
+  --cfg_prob 0.5
+```
+
+# Inference:
+
+# Reconstruction with Fine-Grained Metadata Conditioning
+```bash
+python recon_complex_multi.py \
+  --pretrained_model_name_or_path ./MRI_checkpoint \
+  --load_dir_meta_brain ./metadata_val.csv \
+  --data_root ./fastmri \
+  --enable_condition_emb \
+  --finetune_folder ./trained_model \
+  --metadata_stats ./metadata_stats.json \
+  --mask_type "uniform1d" \
+  --acc_factor 4
+```
+
+# Acknowledgments
+- We build upon the ContextMRI framework as our baseline
