@@ -7,7 +7,7 @@ import random
 import torch
 from torch import nn
 from torch.utils.data import Dataset, DataLoader
-from transformers import CLIPTokenizer, CLIPTextModel
+from transformers import CLIPTokenizer, CLIPTextModel, T5Tokenizer, T5EncoderModel
 from tqdm import tqdm
 
 
@@ -45,6 +45,12 @@ def load_clip_text_encoder(pretrained_dir: str):
     return tokenizer, text_encoder
 
 
+def load_t5_text_encoder(pretrained_dir: str):
+    tokenizer = T5Tokenizer.from_pretrained(pretrained_dir)
+    text_encoder = T5EncoderModel.from_pretrained(pretrained_dir)
+    return tokenizer, text_encoder
+
+
 def encode_text(prompt, tokenizer, text_encoder, device, max_length=77):
     if max_length is not None:
         tokenizer_max_length = max_length
@@ -62,10 +68,14 @@ def encode_text(prompt, tokenizer, text_encoder, device, max_length=77):
     attention_mask = None
 
     with torch.no_grad():
-        text_embeddings = text_encoder(
-            input_ids=input_ids, attention_mask=attention_mask
-        )[0]
-
+        if isinstance(text_encoder, CLIPTextModel):
+            text_embeddings = text_encoder(
+                input_ids=input_ids, attention_mask=attention_mask
+            )[0]
+        elif isinstance(text_encoder, T5EncoderModel):
+            text_embeddings = text_encoder.encoder(
+                **inputs.to(device)
+            ).last_hidden_state
     return text_embeddings
 
 
@@ -201,6 +211,13 @@ def get_args() -> argparse.Namespace:
         required=True,
         help="Path to metadata_stats.json file",
     )
+    parser.add_argument(
+        "--encoder_type",
+        type=str,
+        choices=["clip", "t5"],
+        default="clip",
+        help="Type of text encoder to use",
+    )
 
     # Training
     parser.add_argument(
@@ -241,10 +258,15 @@ def main():
     fix_seed(args.seed)
 
     # Load the tokenizer and text encoder
-    tokenizer, text_encoder = load_clip_text_encoder(args.pretrained_dir)
+    if args.encoder_type == "clip":
+        tokenizer, text_encoder = load_clip_text_encoder(args.pretrained_dir)
+        emb_size = 512
+    elif args.encoder_type == "t5":
+        tokenizer, text_encoder = load_t5_text_encoder(args.pretrained_dir)
+        emb_size = 768
     text_encoder.to(device)
     text_encoder.eval()
-    emb_size = text_encoder.config.projection_dim
+    # emb_size = text_encoder.config.projection_dim
 
     # Create the dataset and dataloader
     train_set = PromptDataset(args.metadata_stats)
@@ -397,7 +419,8 @@ python3 test_hengjui/text_emb_recover.py \
     --metadata_stats /data/sls/r/u/hengjui/home/scratch/6S982/mri-project/ContextMRI/test_hengjui/metadata_stats.json \
     --lr 1e-4 \
     --batch_size 256 \
-    --num_updates 1000
+    --num_updates 1000 \
+    --encoder_type clip
 
 ==== Results ====
 Using device: cuda
@@ -417,6 +440,38 @@ Numerical MSE:
   TE: 0.0020
   TI: 0.0027
   flip_angle: 0.0010
+Categorical Accuracy:
+  anatomy: 1.0000
+  contrast: 1.0000
+  sequence: 1.0000
+  pathology: 1.0000
+
+python3 test_hengjui/text_emb_recover.py \
+    --pretrained_dir /data/sls/scratch/hengjui/models/t5-base \
+    --metadata_stats /data/sls/r/u/hengjui/home/scratch/6S982/mri-project/ContextMRI/test_hengjui/metadata_stats.json \
+    --lr 1e-4 \
+    --batch_size 256 \
+    --num_updates 1000 \
+    --encoder_type t5
+
+Using device: cuda
+You are using the default legacy behaviour of the <class 'transformers.models.t5.tokenization_t5.T5Tokenizer'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565
+Attributes: ['anatomy', 'slice_number', 'contrast', 'sequence', 'TR', 'TE', 'TI', 'flip_angle', 'pathology']
+Categorical attributes: dict_keys(['anatomy', 'contrast', 'sequence', 'pathology'])
+Attributes: ['anatomy', 'slice_number', 'contrast', 'sequence', 'TR', 'TE', 'TI', 'flip_angle', 'pathology']
+Categorical attributes: dict_keys(['anatomy', 'contrast', 'sequence', 'pathology'])
+Starting training...
+Training: 100%|██████████████████████████████████████████████████████████████████████| 1000/1000 [09:08<00:00,  1.82it/s, loss=0.00544]
+Training completed.
+Evaluating...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:02<00:00,  1.54it/s]
+Evaluation completed.
+Numerical MSE:
+  slice_number: 0.0004
+  TR: 0.0025
+  TE: 0.0006
+  TI: 0.0017
+  flip_angle: 0.0005
 Categorical Accuracy:
   anatomy: 1.0000
   contrast: 1.0000
