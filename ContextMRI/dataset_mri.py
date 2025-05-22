@@ -303,10 +303,12 @@ class MRIDataset:
 
         if self.train:
             if img.shape != (2, 320, 320):
-                raise ValueError(f"Not supported Image size: {img.shape}")
+                print(f"[Warning] Skipping image with invalid shape: {img.shape}")
+                return self.__getitem__((idx + 1) % len(self))
         else:
             if img.shape != (1, 320, 320):
-                raise ValueError(f"Not supported Image size: {img.shape}")
+                print(f"[Warning] Skipping image with invalid shape: {img.shape}")
+                return self.__getitem__((idx + 1) % len(self))
 
         if self.train:
             # p = random.random()
